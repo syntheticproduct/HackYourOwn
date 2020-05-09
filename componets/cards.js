@@ -40,45 +40,84 @@ export default function Cards() {
   return (
     <Container className={classes.cardGrid} maxWidth="md">
       <Grid container spacing={2}>
-        {cards.map((card) => (
-          <Grid item key={card} xs={12} sm={6} md={4}>
-            <Card className={classes.card}>
-              <CardMedia
-                className={classes.cardMedia}
-                image="https://source.unsplash.com/random"
-                title="Image title"
-              />
-              <CardContent className={classes.cardContent}>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Heading
-                </Typography>
-                <Typography>
-                  This is a media card. You can use this section to describe the
-                  content.
-                </Typography>
-              </CardContent>
-              <CardActions>
-                <Button size="small" color="primary">
-                  View
-                </Button>
-              </CardActions>
-            </Card>
-          </Grid>
-        ))}
+        <Grid item xs={12} sm={6} md={4}>
+          <Card className={classes.card}>
+            <CardMedia
+              className={classes.cardMedia}
+              image=""
+              title="Students"
+            />
+            <CardContent className={classes.cardContent}>
+              <Typography gutterBottom variant="h5" component="h2">
+                Students
+              </Typography>
+              <Typography>
+                Apply as a student to get paired with an mentor!
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button size="small" color="primary">
+                Apply
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <Card className={classes.card}>
+            <CardMedia
+              className={classes.cardMedia}
+              image=""
+              title="Mentors"
+            />
+            <CardContent className={classes.cardContent}>
+              <Typography gutterBottom variant="h5" component="h2">
+                Mentors
+              </Typography>
+              <Typography>
+                Help raise the next generation of developer by applying to be an mentor!
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button size="small" color="primary">
+                Apply
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <Card className={classes.card}>
+            <CardMedia
+              className={classes.cardMedia}
+              image=""
+              title="Donors"
+            />
+            <CardContent className={classes.cardContent}>
+              <Typography gutterBottom variant="h5" component="h2">
+                Donors
+              </Typography>
+              <Typography>
+                Support our project by donating to us! We appreciate your donations.
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button size="small" color="primary">
+                Donate
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
       </Grid>
     </Container>
   );
 }
 
 export function BigCard({ children }) {
-    const classes = useStyles();
-    return (
+  const classes = useStyles();
+  return (
     <Container className={classes.cardGrid} maxWidth="lg">
-        <Card className={classes.card}>
-            <CardContent className={classes.cardContent}>
-                {children}
-            </CardContent>
-        </Card>
+      <Card className={classes.card}>
+        <CardContent className={classes.cardContent}>{children}</CardContent>
+      </Card>
     </Container>
   );
 }
