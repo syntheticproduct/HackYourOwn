@@ -6,6 +6,8 @@ import Cards from "../componets/cards";
 import Container from "@material-ui/core/Container";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 
 const useStyles = makeStyles((theme) => ({
   padding1: {
@@ -64,7 +66,13 @@ export default function Body() {
       </Typography>
       <Divider />
       <Grid container justify="center" className={classes.padding1}>
-        <Button variant="contained" color="primary">
+        <Button
+          variant="contained"
+          color="primary"
+          startIcon={<FontAwesomeIcon icon={faDiscord} />}
+          target="_blank"
+          href="https://discord.gg/KNKdGGe"
+        >
           Join our Discord!
         </Button>
       </Grid>
