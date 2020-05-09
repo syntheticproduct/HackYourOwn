@@ -3,6 +3,9 @@ import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import { makeStyles } from "@material-ui/core/styles";
 import Cards from "../componets/cards";
+import Container from "@material-ui/core/Container";
+import Button from "@material-ui/core/Button";
+import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles((theme) => ({
   padding1: {
@@ -13,13 +16,13 @@ const useStyles = makeStyles((theme) => ({
 export default function Body() {
   const classes = useStyles();
   return (
-    <div>
+    <Container maxWidth="md">
       <Typography variant="h4" align="center">
         About
       </Typography>
       <Divider />
       <Typography
-        variant="b1"
+        variant="body1"
         color="textSecondary"
         paragraph
         className={classes.padding1}
@@ -39,7 +42,7 @@ export default function Body() {
       </Typography>
       <Divider />
       <Typography
-        variant="b1"
+        variant="body1"
         color="textSecondary"
         paragraph
         className={classes.padding1}
@@ -56,6 +59,15 @@ export default function Body() {
       </Typography>
       <Divider />
       <Cards />
-    </div>
+      <Typography variant="h4" align="center">
+        Contact Us
+      </Typography>
+      <Divider />
+      <Grid container justify="center" className={classes.padding1}>
+        <Button variant="contained" color="primary">
+          Join our Discord!
+        </Button>
+      </Grid>
+    </Container>
   );
 }
