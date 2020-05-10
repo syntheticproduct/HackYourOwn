@@ -19,6 +19,17 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     display: "flex",
     flexDirection: "column",
+    boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
+    transition: "0.3s",
+    "&:hover": {
+      boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)",
+    },
+  },
+  blankCard: {
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
+    boxShadow: "0 0px 0px 0 rgba(0,0,0,0)",
   },
   cardMedia: {
     paddingTop: "56.25%", // 16:9
@@ -41,7 +52,7 @@ export default function Cards() {
     <Container className={classes.cardGrid} maxWidth="md">
       <Grid container spacing={2}>
         <Grid item xs={12} sm={6} md={4}>
-          <Card className={classes.card}>
+          <Card className={classes.blankCard}>
             <CardMedia
               className={classes.cardMedia}
               image=""
@@ -63,7 +74,7 @@ export default function Cards() {
           </Card>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
-          <Card className={classes.card}>
+          <Card className={classes.blankCard}>
             <CardMedia
               className={classes.cardMedia}
               image=""
@@ -85,7 +96,7 @@ export default function Cards() {
           </Card>
         </Grid>
         <Grid item xs={12} sm={6} md={4}>
-          <Card className={classes.card}>
+          <Card className={classes.blankCard}>
             <CardMedia
               className={classes.cardMedia}
               image=""
@@ -115,7 +126,7 @@ export function BigCard({ children }) {
   const classes = useStyles();
   return (
     <Container className={classes.cardGrid} maxWidth="lg">
-      <Card className={classes.card}>
+      <Card className={classes.card} raised="true">
         <CardContent className={classes.cardContent}>{children}</CardContent>
       </Card>
     </Container>

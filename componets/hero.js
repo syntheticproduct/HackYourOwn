@@ -4,8 +4,13 @@ import Container from "@material-ui/core/Container";
 
 const useStyles = makeStyles((theme) => ({
   heroContent: {
-    backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(8, 0, 0),
+  },
+  white: {
+    color: "#FFFFFF",
+  },
+  orange: {
+    color: "#ff9900"
   },
 }));
 
@@ -19,8 +24,8 @@ export default function Hero() {
           component="h1"
           variant="h2"
           align="center"
-          color="textPrimary"
           gutterBottom
+          className={classes.orange}
         >
           Hack Your Own
         </Typography>
@@ -28,7 +33,7 @@ export default function Hero() {
           component="h1"
           variant="h1"
           align="center"
-          color="textSecondary"
+          className={classes.white}
           paragraph
         >
           Computer Science Internship!
