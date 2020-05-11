@@ -16,6 +16,12 @@ const useStyles = makeStyles((theme) => ({
   center: {
     textAlign: "center",
   },
+  left: {
+    textAlign: "left",
+  },
+  right: {
+    textAlign: "right",
+  },
   orange: {
     backgroundColor: "#5433FF",
   },
@@ -83,7 +89,7 @@ export default function Body() {
         direction="row"
         className={classes.padding1}
       >
-        <Grid item xs={12} sm={6} className={classes.center}>
+        <Grid item xs={12} sm={6} className={classes.right}>
           <Button
             variant="contained"
             color="primary"
@@ -94,7 +100,7 @@ export default function Body() {
             Join our Discord!
           </Button>
         </Grid>
-        <Grid item xs={12} sm={6} className={classes.center}>
+        <Grid item xs={12} sm={6} className={classes.left}>
           <Button
             variant="contained"
             color="primary"
