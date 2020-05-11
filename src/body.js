@@ -106,7 +106,7 @@ export default function Body() {
             color="primary"
             startIcon={<FontAwesomeIcon icon={faCcStripe} />}
             target="_blank"
-            href="#"
+            href="http://stripe.com/"
             className={classes.orange}
           >
             Donate
