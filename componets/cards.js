@@ -63,12 +63,12 @@ export default function Cards() {
                 Students
               </Typography>
               <Typography>
-                Apply as a student to get paired with an mentor!
+              Apply as a student to get paired with a team of peers and a mentor. Our platform of choice for collaboration is Discord. You will need to join our discord server to start the process.
               </Typography>
             </CardContent>
             <CardActions>
               <Button size="small" color="primary">
-                Apply
+                Join
               </Button>
             </CardActions>
           </Card>
@@ -85,7 +85,7 @@ export default function Cards() {
                 Mentors
               </Typography>
               <Typography>
-                Help raise the next generation of developer by applying to be an mentor!
+                Take this opportunity to give back to the next generation of developers in these
               </Typography>
             </CardContent>
             <CardActions>
@@ -104,15 +104,15 @@ export default function Cards() {
             />
             <CardContent className={classes.cardContent}>
               <Typography gutterBottom variant="h5" component="h2">
-                Donors
+                Submit a project
               </Typography>
               <Typography>
-                Support our project by donating to us! We appreciate your donations.
+                Support our initiative by sending us open source project ideas.
               </Typography>
             </CardContent>
             <CardActions>
               <Button size="small" color="primary">
-                Donate
+                Submit
               </Button>
             </CardActions>
           </Card>

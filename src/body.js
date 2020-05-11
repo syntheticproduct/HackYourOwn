@@ -29,15 +29,9 @@ export default function Body() {
         paragraph
         className={classes.padding1}
       >
-        Due to Covid-19, tens of thousands of Computer Science internships have
-        been canceled, leaving students stranded. Many have turned to developing
-        side projects to fill the void, but this lacks a few crucial components
-        of the internship experience - mentoring and feedback from
-        professionals. Our program aims to add this extra dimension to your side
-        projects. By participating, you'll connect with like-minded peers to
-        learn and collaborate with and form teams to design and build projects,
-        all while receiving mentorship and guidance from experienced developers.
-        Think of this as a summer senior design course with industry advisors.
+        Due to Covid-19, tens of thousands of Computer Science internships have been canceled, leaving students stranded. While many have turned to developing their own projects to fill the void, self-study  lacks a few crucial components of the internship experience - mentoring and feedback from professionals. Hack Your Own aims to add this extra dimension.
+        
+        By participating, you'll join a community of like-minded peers to design and build high-impact open source projects while receiving mentorship and guidance from experienced developers. Think of it as an intensive summer senior design course supported by industry advisors.
       </Typography>
       <Typography variant="h4" align="center">
         Our Goal
@@ -49,12 +43,14 @@ export default function Body() {
         paragraph
         className={classes.padding1}
       >
-        For everyone who is looking for a 2020 internship, we want high-quality
-        tech talent to produce tech projects during a time where there is a
-        critical gap in opportunity. Our mission is to vet and connect
-        high-quality emerging tech talent through a three month intensive
-        program that provide peer-learning, professional development mentorships
-        and smartly-scoped projects
+        We are welcoming CS students and early-career professionals 
+        interested in developing their skills by scoping, building 
+        and refining original open source projects during a time
+         where there is a critical gap in internship opportunities. 
+         Our mission is to vet and connect high-quality emerging tech 
+         talent through a team-based, three month intensive program
+          that provides peer-learning, professional development, 
+          mentorships and smartly-scoped projects.
       </Typography>
       <Typography variant="h4" align="center">
         Join Us

@@ -30,13 +30,13 @@ export default function Hero() {
           Hack Your Own
         </Typography>
         <Typography
-          component="h1"
-          variant="h1"
+          component="h2"
+          variant="h2"
           align="center"
           className={classes.white}
           paragraph
         >
-          Computer Science Internship!
+          CS Internship Experience
         </Typography>
       </Container>
     </div>
