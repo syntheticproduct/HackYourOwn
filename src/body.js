@@ -42,7 +42,7 @@ export default function Body() {
         className={classes.padding1}
         align="center"
       >
-        Due to Covid-19, tens of thousands of Computer Science internships have
+        Due to COVID-19, tens of thousands of Computer Science internships have
         been canceled, leaving students stranded. While many have turned to
         developing their own projects to fill the void, self-study lacks a few
         crucial components of the internship experience - mentoring and feedback
@@ -51,6 +51,21 @@ export default function Body() {
         and build high-impact open source projects while receiving mentorship
         and guidance from experienced developers. Think of it as an intensive
         summer senior design course supported by industry advisors.
+      </Typography>
+      <Typography variant="h4" align="center">
+        Who we are
+      </Typography>
+      <Divider />
+      <Typography
+        variant="body1"
+        color="textSecondary"
+        paragraph
+        className={classes.padding1}
+        align="center"
+      >
+        We are trying to help people whose internship opportunities were cancelled due to 
+        the COVID-19 outbreak. We want to emulate a internship experience, pair groups with 
+        mentors who work as developers at top companies.
       </Typography>
       <Typography variant="h4" align="center">
         Our Goal
