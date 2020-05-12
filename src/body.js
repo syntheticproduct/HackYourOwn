@@ -60,6 +60,7 @@ export default function Body() {
         variant="body1"
         color="textSecondary"
         paragraph
+        
         className={classes.padding1}
         align="center"
       >
