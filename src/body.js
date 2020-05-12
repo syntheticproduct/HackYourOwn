@@ -7,7 +7,7 @@ import Container from "@material-ui/core/Container";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDiscord, faCcStripe } from "@fortawesome/free-brands-svg-icons";
+import { faDiscord, faPaypal } from "@fortawesome/free-brands-svg-icons";
 
 const useStyles = makeStyles((theme) => ({
   padding1: {
@@ -53,20 +53,6 @@ export default function Body() {
         summer senior design course supported by industry advisors.
       </Typography>
       <Typography variant="h4" align="center">
-        Who we are
-      </Typography>
-      <Divider />
-      <Typography
-        variant="body1"
-        color="textSecondary"
-        paragraph
-        
-        className={classes.padding1}
-        align="center"
-      >
-        We are senior developers and tech leads from major US companies. Bios will be added to this site soon.
-      </Typography>
-      <Typography variant="h4" align="center">
         Our Goal
       </Typography>
       <Divider />
@@ -84,6 +70,20 @@ export default function Body() {
         emerging tech talent through a team-based, three month intensive program
         that provides peer-learning, professional development, mentorships and
         smartly-scoped projects.
+      </Typography>
+      <Typography variant="h4" align="center">
+        Who we are
+      </Typography>
+      <Divider />
+      <Typography
+        variant="body1"
+        color="textSecondary"
+        paragraph
+        
+        className={classes.padding1}
+        align="center"
+      >
+        We are senior developers and tech leads from major US companies. Bios will be added to this site soon.
       </Typography>
       <Typography variant="h4" align="center">
         Support Us
@@ -118,7 +118,7 @@ export default function Body() {
           <Button
             variant="contained"
             color="primary"
-            startIcon={<FontAwesomeIcon icon={faCcStripe} />}
+            startIcon={<FontAwesomeIcon icon={faPaypal} />}
             target="_blank"
             href="https://paypal.me/hackyourown"
             className={classes.orange}
