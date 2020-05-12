@@ -64,9 +64,7 @@ export default function Body() {
         className={classes.padding1}
         align="center"
       >
-        We are trying to help people whose internship opportunities were cancelled due to 
-        the COVID-19 outbreak. We want to emulate a internship experience, pair groups with 
-        mentors who work as developers at top companies.
+        We are senior developers and tech leads from major US companies. Bios will be added to this site soon.
       </Typography>
       <Typography variant="h4" align="center">
         Our Goal
