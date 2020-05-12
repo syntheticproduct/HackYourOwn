@@ -120,7 +120,7 @@ export default function Body() {
             color="primary"
             startIcon={<FontAwesomeIcon icon={faCcStripe} />}
             target="_blank"
-            href="http://stripe.com/"
+            href="https://paypal.me/hackyourown"
             className={classes.orange}
           >
             Donate
