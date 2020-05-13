@@ -101,8 +101,10 @@ export default function Cards() {
                 Mentors
               </Typography>
               <Typography align="center" color="textSecondary" paragraph>
-                Take this opportunity to influence the next generation of
-                developers in these difficult times.
+                Can you spend an hour or two a week mentor a small team of
+                interns over summer? If yes, we would love to hear from you.Take
+                this opportunity to influence the next generation of developers
+                in these difficult times.
               </Typography>
             </CardContent>
             <CardActions>
