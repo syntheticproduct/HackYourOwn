@@ -6,6 +6,8 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDiscord, faPaypal } from "@fortawesome/free-brands-svg-icons";
 
 const useStyles = makeStyles((theme) => ({
   cardGrid: {
@@ -46,7 +48,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(6),
   },
-
+  donateColor: {
+    backgroundColor: "#00457C",
+  },
 }));
 
 export default function Cards() {
@@ -54,7 +58,7 @@ export default function Cards() {
 
   return (
     <Container className={classes.cardGrid} maxWidth="md">
-      <Grid container spacing={2}>
+      <Grid container spacing={2} justify={"center"}>
         <Grid item xs={12} sm={6} md={4}>
           <Card className={classes.blankCard}>
             <CardContent className={classes.cardContent}>
@@ -97,8 +101,8 @@ export default function Cards() {
                 Mentors
               </Typography>
               <Typography align="center" color="textSecondary" paragraph>
-                Take this opportunity to give back to the next generation of
-                developers in these
+                Take this opportunity to influence the next generation of
+                developers in these difficult times.
               </Typography>
             </CardContent>
             <CardActions>
@@ -138,6 +142,52 @@ export default function Cards() {
                 variant="outlined"
               >
                 Submit
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={12} md={12}>
+          <Card className={classes.blankCard}>
+            <CardContent className={classes.cardContent}>
+              <Typography
+                gutterBottom
+                variant="h5"
+                component="h2"
+                align="center"
+              >
+                Donate
+              </Typography>
+              <Typography align="center" color="textSecondary" paragraph>
+                All donations will go strictly to supporting students - e.g.
+                cloud server credits, training material, and an end-of-summer
+                pizza event. Any and all excess funds will be donated to a
+                code-related 501.c.3 non-profit. We are also looking for
+                donations of cloud credits (e.g. AWS) for our build servers and
+                compute instances. Vouchers for training platfoms (e.g udemy)
+                are also needed.
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button
+                variant="contained"
+                color="primary"
+                startIcon={<FontAwesomeIcon icon={faPaypal} />}
+                target="_blank"
+                href="https://paypal.me/hackyourown"
+                className={classes.donateColor}
+              >
+                Donate
+              </Button>
+            </CardActions>
+            <CardActions>
+              <Button
+                variant="contained"
+                color="primary"
+                startIcon={<FontAwesomeIcon icon={faDiscord} />}
+                target="_blank"
+                href="https://discord.gg/KNKdGGe"
+              >
+                Join our Discord!
               </Button>
             </CardActions>
           </Card>
