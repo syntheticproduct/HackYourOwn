@@ -52,7 +52,7 @@ export default function Body() {
         and guidance from experienced developers. Think of it as an intensive
         summer senior design course supported by industry advisors.
       </Typography>
-      <Typography variant="h4" align="center">
+      <Typography variant="h4" className={classes.padding1} align="center">
         Our Goal
       </Typography>
       <Divider />
@@ -71,7 +71,7 @@ export default function Body() {
         that provides peer-learning, professional development, mentorships and
         smartly-scoped projects.
       </Typography>
-      <Typography variant="h4" align="center">
+      <Typography variant="h4" className={classes.padding1} align="center">
         Who we are
       </Typography>
       <Divider />
@@ -85,7 +85,7 @@ export default function Body() {
       >
         We are senior developers and tech leads from major US companies. Bios will be added to this site soon.
       </Typography>
-      <Typography variant="h4" align="center">
+      <Typography variant="h4" className={classes.padding1} align="center">
         Support Us
       </Typography>
       <Divider />
