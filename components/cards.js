@@ -101,10 +101,11 @@ export default function Cards() {
                 Mentors
               </Typography>
               <Typography align="center" color="textSecondary" paragraph>
-                Can you spend an hour or two a week mentor a small team of
-                interns over summer? If yes, we would love to hear from you.Take
-                this opportunity to influence the next generation of developers
-                in these difficult times.
+                Can you spend an hour or two a week to mentor a small team of
+                interns over summer? If yes, we would love to hear from you. We
+                expect the stack to be mainly javascript-based
+                (react/node/express) but we welcome any developer one who wants
+                to give guidance regardless of language.
               </Typography>
             </CardContent>
             <CardActions>
