@@ -6,6 +6,7 @@ import Copyright from '../src/Copyright';
 import Hero from '../components/hero';
 import Body from '../src/body';
 import { makeStyles } from "@material-ui/core/styles";
+import TopBar from "../src/appbar";
 
 const useStyles = makeStyles((theme) => ({
   background: {
@@ -20,6 +21,7 @@ export default function Index() {
   const classes = useStyles();
   return (
     <div className={classes.background}>
+      <TopBar />
       <Container maxWidth="xl">
         <Hero />
         <Box my={4}>
