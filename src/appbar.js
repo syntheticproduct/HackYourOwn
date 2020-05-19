@@ -4,17 +4,18 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Menu from "@material-ui/core/Menu";
 import Icon from "@material-ui/core/Icon";
+import { PayPalButton } from "../components/button";
 
 const useStyles = makeStyles((theme) => ({
   white: {
     backgroundColor: "white",
     color: "white",
   },
-  title: {
-    flexGrow: 1,
-  },
   icon: {
     marginRight: 5,
+  },
+  title: {
+    flexGrow: 1,
   },
 }));
 
@@ -29,8 +30,8 @@ export default function TopBar() {
           {/* I didn't want to use the favicon, but there is no other choice, I need transparent of the logo only. This is only the placeholder.*/}
           <img src="/images/favicon2.ico" height={25} width={25} />
         </Icon>
-        <Typography variant="h6">Hack Your Own</Typography>
-        
+        <Typography variant="h6" className={classes.title} >Hack Your Own</Typography>
+        <PayPalButton />
       </ToolBar>
     </AppBar>
   );

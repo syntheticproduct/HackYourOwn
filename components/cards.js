@@ -6,8 +6,7 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDiscord, faPaypal } from "@fortawesome/free-brands-svg-icons";
+import { PayPalButton, DiscordButton } from "../components/button";
 
 const useStyles = makeStyles((theme) => ({
   cardGrid: {
@@ -171,27 +170,10 @@ export default function Cards() {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button
-                variant="contained"
-                color="primary"
-                startIcon={<FontAwesomeIcon icon={faPaypal} />}
-                target="_blank"
-                href="https://paypal.me/hackyourown"
-                className={classes.donateColor}
-              >
-                Donate
-              </Button>
+              <PayPalButton />
             </CardActions>
             <CardActions>
-              <Button
-                variant="contained"
-                color="primary"
-                startIcon={<FontAwesomeIcon icon={faDiscord} />}
-                target="_blank"
-                href="https://discord.gg/KNKdGGe"
-              >
-                Join our Discord!
-              </Button>
+              <DiscordButton />
             </CardActions>
           </Card>
         </Grid>
