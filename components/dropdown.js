@@ -1,7 +1,8 @@
-import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
-import Link from "next/link";
+import { useTheme } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import MobileDrawer, { Menu } from "./drawers";
 
 const useStyles = makeStyles((theme) => ({
   dropdown: {
@@ -33,21 +34,17 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Dropdown() {
-  const classes = useStyles();
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("sm"));
 
-  return (
-    <>
-      <div className={classes.dropdown}>
-        <Button>Our Stories</Button>
-        <div className={classes.dropdownContent}>
-          <Button className={classes.dropdownTesto} href="/staff">
-            Meet our Staff
-          </Button>
-          <Button className={classes.dropdownTesto} href="#">
-            Meet our Students
-          </Button>
-        </div>
-      </div>
-    </>
-  );
+  return Menus(matches);
+}
+
+function Menus(matches) {
+
+  if (matches) {
+    return <Menu match={true} />;
+  } else {
+    return <MobileDrawer />
+  }
 }
