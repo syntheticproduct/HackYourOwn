@@ -14,9 +14,13 @@ import { faDiscord, faPaypal } from "@fortawesome/free-brands-svg-icons";
 
 const useStyles = makeStyles((theme) => ({
   header: {
-marginTop: '15px',
-marginBottom: '15px',
+  marginTop: '15px',
+  marginBottom: '15px',
   },
+  subheader: {
+    marginTop: '25px',
+    marginBottom: '15px',
+    },
   paper: {
     padding: theme.spacing(3),
     textAlign: 'center',
@@ -49,9 +53,10 @@ export default function StaffList() {
   return (
     <Container maxWidth="md">
       <Typography variant='h3' align="center"  className={classes.header}>Meet The Team</Typography>
+      <Divider />
+      <Typography variant='h5' align="center"  className={classes.subheader}>Volunteers</Typography>
       <Grid container spacing={3}>
         <Grid item xs={12}>
-         
         </Grid>
         <Grid item xs={3}>
           <Paper className={classes.paper}> 
