@@ -7,6 +7,7 @@ import Hero from "../components/hero";
 import { makeStyles } from "@material-ui/core/styles";
 import StaffList from "../src/staffList";
 import TopBar from "../src/appbar";
+import Head from "next/head";
 
 const useStyles = makeStyles((theme) => ({
   background: {
@@ -20,17 +21,22 @@ const useStyles = makeStyles((theme) => ({
 export default function Index() {
   const classes = useStyles();
   return (
-    <div className={classes.background}>
-      <TopBar />
-      <Container maxWidth="xl">
-        <Hero />
-        <Box my={4}>
-          <BigCard>
-            <StaffList />
-          </BigCard>
-          <Copyright />
-        </Box>
-      </Container>
-    </div>
+    <>
+      <Head>
+        <title>Staff | HYO</title>
+      </Head>
+      <div className={classes.background}>
+        <TopBar />
+        <Container maxWidth="xl">
+          <Hero />
+          <Box my={4}>
+            <BigCard>
+              <StaffList />
+            </BigCard>
+            <Copyright />
+          </Box>
+        </Container>
+      </div>
+    </>
   );
 }

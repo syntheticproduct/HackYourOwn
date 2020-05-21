@@ -177,7 +177,8 @@ export function Menu(match) {
   const handleClick = () => {
     setOpen(!open);
   };
-
+  
+  // Remove comments in code to revert back to old...
   return (
     <div>
       {(() => {
