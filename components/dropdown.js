@@ -40,7 +40,7 @@ export default function Dropdown() {
       <div className={classes.dropdown}>
         <Button>Our Stories</Button>
         <div className={classes.dropdownContent}>
-          <Button className={classes.dropdownTesto} href="#">
+          <Button className={classes.dropdownTesto} href="/staff">
             Meet our Staff
           </Button>
           <Button className={classes.dropdownTesto} href="#">
