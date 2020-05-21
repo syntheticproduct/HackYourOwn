@@ -5,6 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Cards from "../components/cards";
 import Container from "@material-ui/core/Container";
 
+
 const useStyles = makeStyles((theme) => ({
   padding1: {
     padding: theme.spacing(1, 0, 0),
@@ -77,7 +78,7 @@ export default function Body() {
         align="center"
       >
         We are senior developers and tech leads from major US companies. Bios
-        will be added to this site soon.
+        will be added to this site soon. For now, view our staff page here.
       </Typography>
       <Typography variant="h4" className={classes.padding1} align="center">
         Support Us
