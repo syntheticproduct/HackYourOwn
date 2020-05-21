@@ -16,12 +16,10 @@ const useStyles = makeStyles((theme) => ({
   dropdownContent: {
     position: "absolute",
     backgroundColor: "#f1f1f1",
-    minWidth: "160px",
+    minWidth: "100%",
     boxShadow: "0px 8px 16px 0px rgba(0,0,0,0.2)",
+    overflow: "auto",
     zIndex: 1,
-    "&:hover": {
-      display: "block",
-    },
     "& a": {
       color: "black",
       padding: "12px 16px",
@@ -38,19 +36,18 @@ export default function Dropdown() {
   const classes = useStyles();
 
   return (
-    <div className={classes.dropdown}>
-      <Button>Dropdown</Button>
-      <div className={classes.dropdownContent}>
-        <Button className={classes.dropdownTesto} href="#">
-          Link
-        </Button>
-        <Button className={classes.dropdownTesto} href="#">
-          Link 2
-        </Button>
-        <Button className={classes.dropdownTesto} href="#">
-          Link 3
-        </Button>
+    <>
+      <div className={classes.dropdown}>
+        <Button>Our Stories</Button>
+        <div className={classes.dropdownContent}>
+          <Button className={classes.dropdownTesto} href="#">
+            Meet our Staff
+          </Button>
+          <Button className={classes.dropdownTesto} href="#">
+            Meet our Students
+          </Button>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
