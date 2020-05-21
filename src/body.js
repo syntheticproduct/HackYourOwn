@@ -9,6 +9,7 @@ import Grid from "@material-ui/core/Grid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDiscord, faPaypal } from "@fortawesome/free-brands-svg-icons";
 
+
 const useStyles = makeStyles((theme) => ({
   padding1: {
     padding: theme.spacing(1, 0, 0),
@@ -81,7 +82,7 @@ export default function Body() {
         align="center"
       >
         We are senior developers and tech leads from major US companies. Bios
-        will be added to this site soon.
+        will be added to this site soon. For now, view our staff page here.
       </Typography>
       <Typography variant="h4" className={classes.padding1} align="center">
         Support Us

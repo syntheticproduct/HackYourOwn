@@ -5,9 +5,7 @@ import { BigCard } from '../components/cards';
 import Copyright from '../src/Copyright';
 import Hero from '../components/hero';
 import Body from '../src/body';
-import AdvisoryBody from '../src/AdvisoryBody';
 import { makeStyles } from "@material-ui/core/styles";
-import StaffList from '../src/staffList';
 
 const useStyles = makeStyles((theme) => ({
   background: {
@@ -26,8 +24,7 @@ export default function Index() {
         <Hero />
         <Box my={4}>
           <BigCard>
-            <StaffList />
-            {/* <AdvisoryBody /> */}
+            <Body />
           </BigCard>
           <Copyright />
         </Box>
