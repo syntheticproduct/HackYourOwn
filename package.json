@@ -13,8 +13,7 @@
     "next": "latest",
     "prop-types": "latest",
     "react": "latest",
-    "react-dom": "latest",
-    "react-router-dom": "^5.2.0"
+    "react-dom": "latest"
   },
   "scripts": {
     "dev": "next",
