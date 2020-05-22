@@ -27,7 +27,7 @@ export default function TopBar() {
   return (
     <AppBar position="sticky" color="inherit" className={classes.title}>
       {/* sticky doesn't work on IE 11, but who uses that anyways :) */}
-      <ToolBar>
+      <Toolbar>
         <IconButton className={classes.icon} href="/" disableRipple>
           <img src="/images/appbarlogo.png" height={25} width={25} />
         </IconButton>
@@ -35,7 +35,7 @@ export default function TopBar() {
           Hack Your Own
         </Typography>
         <Dropdown />
-      </ToolBar>
+      </Toolbar>
     </AppBar>
   );
 }
