@@ -8,7 +8,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.13.0",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@fortawesome/react-fontawesome": "^0.1.9",
-    "@material-ui/core": "latest",
+    "@material-ui/core": "^4.9.14",
     "clsx": "latest",
     "next": "latest",
     "prop-types": "latest",
