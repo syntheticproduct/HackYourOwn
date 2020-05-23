@@ -55,7 +55,6 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     padding: theme.spacing(0, 1),
-    // necessary for content to be below app bar
     ...theme.mixins.toolbar,
     justifyContent: "flex-start",
   },
@@ -178,24 +177,20 @@ export function Menu(match) {
     setOpen(!open);
   };
   
-  // Remove comments in code to revert back to old...
   return (
     <div>
       {(() => {
         if (match["match"]) {
           return (
             <div className={classes.dropdown}>
-              {/*
               <Button>{menu1["menu"]}</Button>
               <div className={classes.dropdownContent}>
-              */}
                 <Button
                   className={classes.dropdownTesto}
                   href={menu1["topic1"]["href"]}
                 >
                   {menu1["topic1"]["desc"]}
                 </Button>
-                {/*
                 <Button
                   className={classes.dropdownTesto}
                   href={menu1["topic2"]["href"]}
@@ -203,7 +198,6 @@ export function Menu(match) {
                   {menu1["topic2"]["desc"]}
                 </Button>
               </div>
-                */}
             </div>
           );
         } else {
@@ -212,21 +206,17 @@ export function Menu(match) {
               <ListItem
                 button
                 onClick={handleClick}
-                component="a"
-                href={menu1["topic1"]["href"]}
               >
                 <ListItemText
                   disableTypography
                   primary={
                     <Typography component="div">
                       <Box fontWeight="fontWeightMedium" m={1}>
-                        {menu1["topic1"]["desc"]}
-                        {/* menu1["menu"] */}
+                        { menu1["menu"] }
                       </Box>
                     </Typography>
                   }
                 />
-                {/*
                 {open ? (
                   <FontAwesomeIcon
                     icon={faChevronUp}
@@ -237,9 +227,8 @@ export function Menu(match) {
                     icon={faChevronDown}
                     style={{ fontSize: "1.125rem" }}
                   />
-                )}*/}
+                )}
               </ListItem>
-              {/*
               <Collapse
                 in={open}
                 timeout="auto"
@@ -285,7 +274,6 @@ export function Menu(match) {
                   </ListItem>
                 </List>
               </Collapse>
-                    */}
             </List>
           );
         }
