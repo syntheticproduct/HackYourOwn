@@ -53,7 +53,12 @@ export default function StaffList() {
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6} lg={3}>
           <Paper className={classes.paper}>
-            <Avatar alt="C" src="/" align="center" className={classes.large} />
+            <Avatar
+              alt="C"
+              src="/images/staff/camille.png"
+              align="center"
+              className={classes.large}
+            />
             <Typography variant="h6">Camille</Typography>
             <Typography varaint="subtitle1" align="center">
               Program Lead (Founder/Director)
@@ -74,7 +79,12 @@ export default function StaffList() {
         </Grid>
         <Grid item xs={12} sm={6} lg={3}>
           <Paper className={classes.paper}>
-            <Avatar alt="J" src="/" align="center" className={classes.large} />
+            <Avatar
+              alt="J"
+              src="/images/staff/jae.jpg"
+              align="center"
+              className={classes.large}
+            />
             <Typography variant="h6">Jae</Typography>
             <Typography varaint="subtitle1">Community Associate</Typography>
           </Paper>
@@ -93,8 +103,13 @@ export default function StaffList() {
         </Grid>
         <Grid item xs={12} sm={6} lg={3}>
           <Paper className={classes.paper}>
-            <Avatar alt="B" src="/" align="center" className={classes.large} />
-            <Typography variant="h6">Binjan</Typography>
+            <Avatar
+              alt="B"
+              src="/images/staff/binvant.jpg"
+              align="center"
+              className={classes.large}
+            />
+            <Typography variant="h6">Binvant</Typography>
             <Typography varaint="subtitle1">
               Community Lead (Asia-Pacific)
             </Typography>
@@ -128,22 +143,25 @@ export default function StaffList() {
         </Grid>
         <Grid item xs={12} sm={6} lg={3}>
           <Paper className={classes.paper}>
-            <Avatar alt="L" src="/" align="center" className={classes.large} />
+            <Avatar
+              alt="L"
+              src="/images/staff/leo.jpg"
+              align="center"
+              className={classes.large}
+            />
             <Typography variant="h6">Leo</Typography>
             <Typography varaint="subtitle1">Project Lead (Website)</Typography>
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6} lg={3}>
           <Paper className={classes.paper}>
-            <Avatar alt="H" src="/" align="center" className={classes.large} />
+            <Avatar
+              alt="H"
+              src="/images/staff/hendrix.png"
+              align="center"
+              className={classes.large}
+            />
             <Typography variant="h6">Hendrix</Typography>
-            <Typography varaint="subtitle1">Engineer</Typography>
-          </Paper>
-        </Grid>
-        <Grid item xs={12} sm={6} lg={3}>
-          <Paper className={classes.paper}>
-            <Avatar alt="N" src="/" align="center" className={classes.large} />
-            <Typography variant="h6">Nayil</Typography>
             <Typography varaint="subtitle1">Engineer</Typography>
           </Paper>
         </Grid>
@@ -157,13 +175,6 @@ export default function StaffList() {
             />
             <Typography variant="h6">Isabella</Typography>
             <Typography varaint="subtitle1">Communications</Typography>
-          </Paper>
-        </Grid>
-        <Grid item xs={12} sm={6} lg={3}>
-          <Paper className={classes.paper}>
-            <Avatar alt="L" src="/" align="center" className={classes.large} />
-            <Typography variant="h6">Laura</Typography>
-            <Typography varaint="subtitle1">Social Media</Typography>
           </Paper>
         </Grid>
         <Grid item xs={12} sm={6} lg={3}>
@@ -182,7 +193,12 @@ export default function StaffList() {
         </Grid>
         <Grid item xs={12} sm={6} lg={3}>
           <Paper className={classes.paper}>
-            <Avatar alt="L" src="/" align="center" className={classes.large} />
+            <Avatar
+              alt="L"
+              src="/images/staff/lyndon.jpg"
+              align="center"
+              className={classes.large}
+            />
             <Typography variant="h6">Lyndon</Typography>
             <Typography varaint="subtitle1">Cohort Advisor, Mentor</Typography>
           </Paper>
@@ -215,14 +231,12 @@ export default function StaffList() {
         </Grid>
         <Grid item xs={12} sm={6} lg={3}>
           <Paper className={classes.paper}>
-            <Avatar alt="B" src="/" align="center" className={classes.large} />
-            <Typography variant="h6">Baxter</Typography>
-            <Typography varaint="subtitle1">Operations</Typography>
-          </Paper>
-        </Grid>
-        <Grid item xs={12} sm={6} lg={3}>
-          <Paper className={classes.paper}>
-            <Avatar alt="K" src="/" align="center" className={classes.large} />
+            <Avatar
+              alt="K"
+              src="/images/staff/kevin.png"
+              align="center"
+              className={classes.large}
+            />
             <Typography variant="h6">Kevin</Typography>
             <Typography varaint="subtitle1">Mentor</Typography>
           </Paper>
@@ -236,13 +250,6 @@ export default function StaffList() {
         </Grid>
         <Grid item xs={12} sm={6} lg={3}>
           <Paper className={classes.paper}>
-            <Avatar alt="A" src="/" align="center" className={classes.large} />
-            <Typography variant="h6">Alex</Typography>
-            <Typography varaint="subtitle1">Volunteer</Typography>
-          </Paper>
-        </Grid>
-        <Grid item xs={12} sm={6} lg={3}>
-          <Paper className={classes.paper}>
             <Avatar
               alt="A"
               src="/images/staff/alli.jpg"
@@ -250,39 +257,6 @@ export default function StaffList() {
               className={classes.large}
             />
             <Typography variant="h6">Alli</Typography>
-            <Typography varaint="subtitle1">Volunteer</Typography>
-          </Paper>
-        </Grid>
-        <Grid item xs={12} sm={6} lg={3}>
-          <Paper className={classes.paper}>
-            <Avatar alt="A" src="/" align="center" className={classes.large} />
-            <Typography variant="h6">Alex</Typography>
-            <Typography varaint="subtitle1">Volunteer</Typography>
-          </Paper>
-        </Grid>
-        <Grid item xs={12} sm={6} lg={3}>
-          <Paper className={classes.paper}>
-            <Avatar alt="A" src="/" align="center" className={classes.large} />
-            <Typography variant="h6">Attiqa</Typography>
-            <Typography varaint="subtitle1">Volunteer</Typography>
-          </Paper>
-        </Grid>
-        <Grid item xs={12} sm={6} lg={3}>
-          <Paper className={classes.paper}>
-            <Avatar alt="A" src="/" align="center" className={classes.large} />
-            <Typography variant="h6">Alex</Typography>
-            <Typography varaint="subtitle1">Volunteer</Typography>
-          </Paper>
-        </Grid>
-        <Grid item xs={12} sm={6} lg={3}>
-          <Paper className={classes.paper}>
-            <Avatar
-              alt="B"
-              src="/images/staff/binvant.jpg"
-              align="center"
-              className={classes.large}
-            />
-            <Typography variant="h6">Binvant</Typography>
             <Typography varaint="subtitle1">Volunteer</Typography>
           </Paper>
         </Grid>
@@ -319,13 +293,6 @@ export default function StaffList() {
               className={classes.large}
             />
             <Typography variant="h6">Tye</Typography>
-            <Typography varaint="subtitle1">Volunteer</Typography>
-          </Paper>
-        </Grid>
-        <Grid item xs={12} sm={6} lg={3}>
-          <Paper className={classes.paper}>
-            <Avatar alt="X" src="/" align="center" className={classes.large} />
-            <Typography variant="h6">Xehna</Typography>
             <Typography varaint="subtitle1">Volunteer</Typography>
           </Paper>
         </Grid>
