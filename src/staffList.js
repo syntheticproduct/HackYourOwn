@@ -243,7 +243,12 @@ export default function StaffList() {
         </Grid>
         <Grid item xs={12} sm={6} lg={3}>
           <Paper className={classes.paper}>
-            <Avatar alt="R" src="/" align="center" className={classes.large} />
+            <Avatar
+              alt="R"
+              src="/images/staff/rykuno.jpg"
+              align="center"
+              className={classes.large}
+            />
             <Typography variant="h6">Rykuno</Typography>
             <Typography varaint="subtitle1">Mentor</Typography>
           </Paper>
