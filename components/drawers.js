@@ -167,8 +167,8 @@ export function Menu(match) {
 
   const menu1 = {
     menu: "OUR STORIES",
-    topic1: { desc: "Meet our Staff", href: "/staff" },
-    topic2: { desc: "Meet our Students", href: "/students" },
+    topic1: { desc: "Meet our Staff", href: "/staff.html" },
+    topic2: { desc: "Meet our Students", href: "/students.html" },
   };
 
   const [open, setOpen] = React.useState(false);
