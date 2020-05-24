@@ -176,47 +176,70 @@ export function Menu(match) {
   const handleClick = () => {
     setOpen(!open);
   };
-  
+
   return (
     <div>
       {(() => {
         if (match["match"]) {
           return (
-            <div className={classes.dropdown}>
+            <div>
+              {/*
               <Button>{menu1["menu"]}</Button>
               <div className={classes.dropdownContent}>
-                <Button
-                  className={classes.dropdownTesto}
-                  href={menu1["topic1"]["href"]}
-                >
-                  {menu1["topic1"]["desc"]}
-                </Button>
-                <Button
-                  className={classes.dropdownTesto}
-                  href={menu1["topic2"]["href"]}
-                >
-                  {menu1["topic2"]["desc"]}
-                </Button>
-              </div>
+               */}
+              <Button href={menu1["topic1"]["href"]}>
+                {menu1["topic1"]["desc"]}
+              </Button>
+              <Button href={menu1["topic2"]["href"]}>
+                {menu1["topic2"]["desc"]}
+              </Button>
+              {/*
+              </div>  */}
             </div>
           );
         } else {
           return (
             <List>
-              <ListItem
-                button
-                onClick={handleClick}
-              >
-                <ListItemText
-                  disableTypography
-                  primary={
-                    <Typography component="div">
-                      <Box fontWeight="fontWeightMedium" m={1}>
-                        { menu1["menu"] }
-                      </Box>
-                    </Typography>
-                  }
-                />
+              <List component="div" disablePadding>
+                <ListItem
+                  button
+                  className={classes.nested}
+                  component="a"
+                  href={menu1["topic1"]["href"]}
+                >
+                  <ListItemText
+                    disableTypography
+                    primary={
+                      <Typography component="div">
+                        <Box fontWeight="fontWeightBold" m={1}>
+                          {menu1["topic1"]["desc"]}
+                        </Box>
+                      </Typography>
+                    }
+                  />
+                </ListItem>
+              </List>
+              <List component="div" disablePadding>
+                <ListItem
+                  button
+                  className={classes.nested}
+                  component="a"
+                  href={menu1["topic2"]["href"]}
+                >
+                  <ListItemText
+                    disableTypography
+                    primary={
+                      <Typography component="div">
+                        <Box fontWeight="fontWeightBold" m={1}>
+                          {menu1["topic2"]["desc"]}
+                        </Box>
+                      </Typography>
+                    }
+                  />
+                </ListItem>
+              </List>
+
+              {/*
                 {open ? (
                   <FontAwesomeIcon
                     icon={faChevronUp}
@@ -228,7 +251,8 @@ export function Menu(match) {
                     style={{ fontSize: "1.125rem" }}
                   />
                 )}
-              </ListItem>
+                */}
+              {/*
               <Collapse
                 in={open}
                 timeout="auto"
@@ -274,6 +298,7 @@ export function Menu(match) {
                   </ListItem>
                 </List>
               </Collapse>
+               */}
             </List>
           );
         }
