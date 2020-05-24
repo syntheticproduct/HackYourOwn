@@ -61,7 +61,7 @@ export default function StaffList() {
             />
             <Typography variant="h6">Camille</Typography>
             <Typography varaint="subtitle1" align="center">
-              Program Lead (Founder/Director)
+              Founder, Director
             </Typography>
           </Paper>
         </Grid>
