@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function TopBar() {
+export default function TopBar({ staff=false, student=false }) {
   const classes = useStyles();
 
   return (
@@ -34,7 +34,7 @@ export default function TopBar() {
         <Typography variant="h6" className={classes.title}>
           Hack Your Own
         </Typography>
-        <Dropdown />
+        <Dropdown staff={staff} student={student}/>
       </Toolbar>
     </AppBar>
   );

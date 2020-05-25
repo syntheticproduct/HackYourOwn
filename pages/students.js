@@ -26,7 +26,7 @@ export default function Index() {
         <title>Students | HYO</title>
       </Head>
       <div className={classes.background}>
-        <TopBar />
+        <TopBar student={true}/>
         <Container maxWidth="xl">
           <Hero />
           <Box my={4}>
