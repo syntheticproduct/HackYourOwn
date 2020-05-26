@@ -21,6 +21,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Collapse from "@material-ui/core/Collapse";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
+import Link from "next/link"
 
 const drawerWidth = 240;
 
@@ -167,8 +168,8 @@ export function Menu({match, staff = false, student = false }) {
 
   const menu1 = {
     menu: "OUR STORIES",
-    topic1: { desc: "Meet our Staff", href: "/staff.html" },
-    topic2: { desc: "Meet our Students", href: "/students.html" },
+    topic1: { desc: "Meet our Staff", href: "/staff" },
+    topic2: { desc: "Meet our Students", href: "/students" },
   };
 
   if (staff) {
@@ -194,12 +195,13 @@ export function Menu({match, staff = false, student = false }) {
               <Button>{menu1["menu"]}</Button>
               <div className={classes.dropdownContent}>
                */}
-              <Button href={menu1["topic1"]["href"]}>
-                {menu1["topic1"]["desc"]}
-              </Button>
-              <Button href={menu1["topic2"]["href"]}>
-                {menu1["topic2"]["desc"]}
-              </Button>
+               
+              <Link href={menu1["topic1"]["href"]}>
+                <Button>{menu1["topic1"]["desc"]}</Button>
+              </Link>
+              <Link href={menu1["topic2"]["href"]}>
+                <Button>{menu1["topic2"]["desc"]}</Button>
+              </Link>
               {/*
               </div>  */}
             </div>
