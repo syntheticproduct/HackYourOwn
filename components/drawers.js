@@ -172,10 +172,10 @@ export function Menu({match, staff = false, student = false }) {
   };
 
   if (staff) {
-    menu1["topic1"] = { desc: "Back", href: "/" };
+    menu1["topic1"] = { desc: "Our Program", href: "/" };
   }
   if (student) {
-    menu1["topic2"] = { desc: "Back", href: "/" };
+    menu1["topic2"] = { desc: "Our Program", href: "/" };
   }
 
   const [open, setOpen] = React.useState(false);
