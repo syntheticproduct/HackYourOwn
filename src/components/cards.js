@@ -6,7 +6,8 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-import { PayPalButton, DiscordButton } from "../components/button";
+import DiscordButton from "components/Buttons/DiscordButton";
+import DonateButton from "components/Buttons/DonateButton";
 
 const useStyles = makeStyles((theme) => ({
   cardGrid: {
@@ -170,7 +171,7 @@ export default function Cards() {
               </Typography>
             </CardContent>
             <CardActions>
-              <PayPalButton />
+              <DonateButton />
             </CardActions>
             <CardActions>
               <DiscordButton />
