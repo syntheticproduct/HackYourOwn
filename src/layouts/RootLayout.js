@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function RootLayout({children, title}) {
+export default function RootLayout({children, title, staff, student}) {
   const classes = useStyles();
   return (
     <>
@@ -25,7 +25,7 @@ export default function RootLayout({children, title}) {
         <title>{title}</title>
       </Head>
       <div className={classes.background}>
-        <TopBar staff={true}/>
+        <TopBar staff={staff} student={student}/>
         <Container maxWidth="xl">
           <Hero />
           <Box my={4}>
