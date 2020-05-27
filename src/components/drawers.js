@@ -21,6 +21,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Collapse from "@material-ui/core/Collapse";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
+import Link from "next/link"
 
 const drawerWidth = 240;
 
@@ -76,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MobileDrawer() {
+export default function MobileDrawer({ staff = false, student = false }) {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -125,7 +126,7 @@ export default function MobileDrawer() {
           </IconButton>
         </div>
         <Divider />
-        <Menu />
+        <Menu staff={staff} student={student} />
       </Drawer>
     </>
   );
@@ -162,14 +163,21 @@ const useStyles2 = makeStyles((theme) => ({
   },
 }));
 
-export function Menu(match) {
+export function Menu({match, staff = false, student = false }) {
   const classes = useStyles2();
 
   const menu1 = {
     menu: "OUR STORIES",
-    topic1: { desc: "Meet our Staff", href: "/staff.html" },
-    topic2: { desc: "Meet our Students", href: "/students.html" },
+    topic1: { desc: "Meet our Staff", href: "/staff" },
+    topic2: { desc: "Meet our Students", href: "/students" },
   };
+
+  if (staff) {
+    menu1["topic1"] = { desc: "Our Program", href: "/" };
+  }
+  if (student) {
+    menu1["topic2"] = { desc: "Our Program", href: "/" };
+  }
 
   const [open, setOpen] = React.useState(false);
 
@@ -180,19 +188,20 @@ export function Menu(match) {
   return (
     <div>
       {(() => {
-        if (match["match"]) {
+        if (match) {
           return (
             <div>
               {/*
               <Button>{menu1["menu"]}</Button>
               <div className={classes.dropdownContent}>
                */}
-              <Button href={menu1["topic1"]["href"]}>
-                {menu1["topic1"]["desc"]}
-              </Button>
-              <Button href={menu1["topic2"]["href"]}>
-                {menu1["topic2"]["desc"]}
-              </Button>
+               
+              <Link href={menu1["topic1"]["href"]}>
+                <Button>{menu1["topic1"]["desc"]}</Button>
+              </Link>
+              <Link href={menu1["topic2"]["href"]}>
+                <Button>{menu1["topic2"]["desc"]}</Button>
+              </Link>
               {/*
               </div>  */}
             </div>

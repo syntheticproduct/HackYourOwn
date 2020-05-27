@@ -1,10 +1,9 @@
-import React from "react";
-import Typography from "@material-ui/core/Typography";
+import Container from "@material-ui/core/Container";
 import Divider from "@material-ui/core/Divider";
 import { makeStyles } from "@material-ui/core/styles";
-import Cards from "../components/cards";
-import Container from "@material-ui/core/Container";
-
+import Typography from "@material-ui/core/Typography";
+import React from "react";
+import Cards from "components/cards";
 
 const useStyles = makeStyles((theme) => ({
   padding1: {
@@ -22,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Body() {
+export default function IndexBody() {
   const classes = useStyles();
   return (
     <Container maxWidth="md">

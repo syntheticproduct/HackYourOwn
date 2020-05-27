@@ -33,18 +33,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Dropdown() {
+export default function Dropdown({ staff = false, student = false }) {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up("sm"));
 
-  return Menus(matches);
-}
-
-function Menus(matches) {
-
-  if (matches) {
-    return <Menu match={true} />;
+  if (matches) { 
+    return <Menu match={true} staff={staff} student={student} />;
   } else {
-    return <MobileDrawer />
+    return <MobileDrawer staff={staff} student={student} />;
   }
 }

@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function StaffList() {
+export default function StaffBody() {
   const classes = useStyles();
 
   return (
