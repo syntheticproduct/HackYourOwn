@@ -1,4 +1,4 @@
-import { StyledButton } from "./StyledButtons.styled";
+import { StyledButton } from "./StyledButton.styled";
 import { faDiscord } from "@fortawesome/free-brands-svg-icons";
 
 export default function DiscordButton() {
