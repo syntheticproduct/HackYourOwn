@@ -37,7 +37,6 @@ export default function Dropdown({ staff = false, student = false }) {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up("sm"));
 
-  // I have 0 idea why this works... it just does so im not gonna touch it.
   if (matches) { 
     return <Menu match={true} staff={staff} student={student} />;
   } else {

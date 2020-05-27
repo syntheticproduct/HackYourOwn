@@ -3,7 +3,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import IconButton from "@material-ui/core/IconButton";
-import Dropdown from "../components/dropdown";
+import Dropdown from "components/dropdown";
 
 const useStyles = makeStyles((theme) => ({
   white: {

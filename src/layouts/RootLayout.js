@@ -1,13 +1,12 @@
-import React from "react";
-import Container from "@material-ui/core/Container";
 import Box from "@material-ui/core/Box";
-import { BigCard } from "components/cards";
-import Copyright from "Copyright";
-import Hero from "components/hero";
+import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
-import StudentList from "studentList";
 import TopBar from "appbar";
+import { BigCard } from "components/cards";
+import Hero from "components/hero";
+import Copyright from "Copyright";
 import Head from "next/head";
+import React from "react";
 
 const useStyles = makeStyles((theme) => ({
   background: {
@@ -18,20 +17,20 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Index() {
+export default function RootLayout({children, title}) {
   const classes = useStyles();
   return (
     <>
       <Head>
-        <title>Students | HYO</title>
+        <title>{title}</title>
       </Head>
       <div className={classes.background}>
-        <TopBar student={true}/>
+        <TopBar staff={true}/>
         <Container maxWidth="xl">
           <Hero />
           <Box my={4}>
             <BigCard>
-              <StudentList />
+              {children}
             </BigCard>
             <Copyright />
           </Box>
