@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Body() {
+export default function IndexBody() {
   const classes = useStyles();
   return (
     <Container maxWidth="md">

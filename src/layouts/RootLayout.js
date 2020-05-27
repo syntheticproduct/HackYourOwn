@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import TopBar from "appbar";
 import { BigCard } from "components/cards";
 import Hero from "components/hero";
-import Copyright from "Copyright";
+import Copyright from "components/Copyright/Copyright";
 import Head from "next/head";
 import React from "react";
 
