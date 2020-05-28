@@ -7,7 +7,7 @@ export const StyledButton = ({ icon, href, color, text }) => (
     variant="contained"
     color="primary"
     startIcon={<FontAwesomeIcon icon={icon} />}
-    target="_blank"
+    target="_blank noopener noreferrer"
     href={href}
     style={{ backgroundColor: color }}
   >
@@ -15,14 +15,14 @@ export const StyledButton = ({ icon, href, color, text }) => (
   </Button>
 );
 
-export const SectionButton = ({ target, text, url }) => (
-    <Button
-      size="small"
-      color="primary"
-      target={`_blank ${target}`}
-      href={url}
-      variant="outlined"
-    >
-      {text}
-    </Button>
+export const SectionButton = ({ text, url }) => (
+  <Button
+    size="small"
+    color="primary"
+    target="_blank noopener noreferrer"
+    href={url}
+    variant="outlined"
+  >
+    {text}
+  </Button>
 );

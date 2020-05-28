@@ -37,7 +37,6 @@ export function IndexCards() {
                 to give guidance regardless of language."
           >
             <SectionButton
-              target="noopener noreferrer"
               text="Apply"
               url="mailto:camille@hackyourown.org"
             />
@@ -49,7 +48,6 @@ export function IndexCards() {
             body="Support our initiative by sending us open source project ideas."
           >
             <SectionButton
-              target="noopener noreferrer"
               text="Submit"
               url="mailto:project-idea@hackyourown.org"
             />
