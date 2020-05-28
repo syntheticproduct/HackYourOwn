@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)",
     },
+    height: '230px'
   },
   padding1: {
     padding: theme.spacing(1, 0, 0),
