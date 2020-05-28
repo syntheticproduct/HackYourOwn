@@ -77,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MobileDrawer({ staff = false, student = false }) {
+export default function MobileDrawer() {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -126,7 +126,7 @@ export default function MobileDrawer({ staff = false, student = false }) {
           </IconButton>
         </div>
         <Divider />
-        <Menu staff={staff} student={student} />
+        <Menu/>
       </Drawer>
     </>
   );
@@ -163,7 +163,7 @@ const useStyles2 = makeStyles((theme) => ({
   },
 }));
 
-export function Menu({match, staff = false, student = false }) {
+export function Menu({match}) {
   const classes = useStyles2();
 
   const menu1 = {
@@ -171,13 +171,6 @@ export function Menu({match, staff = false, student = false }) {
     topic1: { desc: "Meet our Staff", href: "/staff" },
     topic2: { desc: "Meet our Students", href: "/students" },
   };
-
-  if (staff) {
-    menu1["topic1"] = { desc: "Our Program", href: "/" };
-  }
-  if (student) {
-    menu1["topic2"] = { desc: "Our Program", href: "/" };
-  }
 
   const [open, setOpen] = React.useState(false);
 
