@@ -49,7 +49,7 @@ export default function StudentBody() {
   return (
     <Container maxWidth="lg">
       <Typography variant="h5" align="center" className={classes.subheader}>
-        Some of the students that we are trying to help:
+        More than 500 people have applied to the program already, from all over the world. Please meet some of them:
       </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12}>
