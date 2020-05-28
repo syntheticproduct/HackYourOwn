@@ -3,16 +3,19 @@ import { styled, withTheme } from "@material-ui/core/styles";
 import { Card, CardContent, CardActions, Typography } from "@material-ui/core";
 
 export const SectionCard = withTheme(
-  styled(({ title, body, ...other }) => (
+  styled(({ children, title, body, ...other }) => (
     <Card {...other}>
       <SectionCardContent>
         <Typography gutterBottom variant="h5" component="h2" align="center">
-          {title && ""} {/* && "" inside the "" */}
+          {title}
         </Typography>
         <Typography align="center" color="textSecondary" paragraph>
-          {body && ""}
+          {body}
         </Typography>
       </SectionCardContent>
+      {React.Children.map(children, (child) => {
+        return <CardActions>{child}</CardActions>;
+      })}
     </Card>
   ))({
     height: "100%",
@@ -26,20 +29,6 @@ export const SectionCard = withTheme(
       boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)",
     },
   })
-);
-
-export const SectionButton = ({ text, url }) => (
-  <CardActions>
-    <Button
-      size="small"
-      color="primary"
-      target="_blank"
-      href={url}
-      variant="outlined"
-    >
-      {text}
-    </Button>
-  </CardActions>
 );
 
 const SectionCardContent = styled(CardContent)({

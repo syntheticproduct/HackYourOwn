@@ -2,9 +2,9 @@ import Box from "@material-ui/core/Box";
 import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
 import TopBar from "appbar";
-import { BigCard } from "components/cards";
-import Hero from "components/hero";
+import BigCard from "components/Cards/BigCard";
 import Copyright from "components/Copyright/Copyright";
+import Hero from "components/hero";
 import Head from "next/head";
 import React from "react";
 

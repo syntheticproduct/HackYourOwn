@@ -14,3 +14,15 @@ export const StyledButton = ({ icon, href, color, text }) => (
     {text}
   </Button>
 );
+
+export const SectionButton = ({ target, text, url }) => (
+    <Button
+      size="small"
+      color="primary"
+      target={`_blank ${target}`}
+      href={url}
+      variant="outlined"
+    >
+      {text}
+    </Button>
+);

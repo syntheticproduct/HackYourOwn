@@ -4,7 +4,7 @@ import RootLayout from 'layouts/RootLayout';
 
 export default function Staff() {
   return (
-    <RootLayout title="Staff | HYO" staff>
+    <RootLayout title="Staff | HYO">
       <StaffBody />
     </RootLayout>
   );
