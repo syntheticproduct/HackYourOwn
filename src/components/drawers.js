@@ -168,8 +168,9 @@ export function Menu({match}) {
 
   const menu1 = {
     menu: "OUR STORIES",
-    topic1: { desc: "Meet our Staff", href: "/staff" },
-    topic2: { desc: "Meet our Students", href: "/students" },
+    topic1: { desc: "Our Program", href: "/program" },
+    topic2: { desc: "Meet our Staff", href: "/staff" },
+    topic3: { desc: "Meet our Students", href: "/students" },
   };
 
   const [open, setOpen] = React.useState(false);
@@ -188,12 +189,14 @@ export function Menu({match}) {
               <Button>{menu1["menu"]}</Button>
               <div className={classes.dropdownContent}>
                */}
-               
               <Link href={menu1["topic1"]["href"]}>
                 <Button>{menu1["topic1"]["desc"]}</Button>
               </Link>
               <Link href={menu1["topic2"]["href"]}>
                 <Button>{menu1["topic2"]["desc"]}</Button>
+              </Link>
+              <Link href={menu1["topic3"]["href"]}>
+                <Button>{menu1["topic3"]["desc"]}</Button>
               </Link>
               {/*
               </div>  */}
@@ -234,6 +237,25 @@ export function Menu({match}) {
                       <Typography component="div">
                         <Box fontWeight="fontWeightBold" m={1}>
                           {menu1["topic2"]["desc"]}
+                        </Box>
+                      </Typography>
+                    }
+                  />
+                </ListItem>
+              </List>
+              <List component="div" disablePadding>
+                <ListItem
+                  button
+                  className={classes.nested}
+                  component="a"
+                  href={menu1["topic3"]["href"]}
+                >
+                  <ListItemText
+                    disableTypography
+                    primary={
+                      <Typography component="div">
+                        <Box fontWeight="fontWeightBold" m={1}>
+                          {menu1["topic3"]["desc"]}
                         </Box>
                       </Typography>
                     }

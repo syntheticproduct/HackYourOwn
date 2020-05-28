@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography';
 export default function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {'Version 0.1, Copyright © Hack Your Own '}
+      {'Version 2, Copyright © Hack Your Own '}
       {new Date().getFullYear()}
       {'.'}
     </Typography>
