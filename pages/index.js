@@ -3,7 +3,6 @@ import Container from "@material-ui/core/Container";
 import {
   AboutSection,
   GoalSection,
-  SupportSection,
   WhoWeAreSection,
 } from "components/Typography/IndexText";
 import React from 'react';
@@ -15,7 +14,6 @@ export default function Index() {
         <AboutSection />
         <GoalSection />
         <WhoWeAreSection />
-        <SupportSection />
       </Container>
     </RootLayout>
   );

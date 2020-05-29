@@ -52,7 +52,7 @@ export function WhoWeAreSection() {
 export function SupportSection() {
   return (
     <>
-      <Heading text="Support Us" />
+      <Heading text="Get Involved" />
       <IndexCards />
     </>
   );

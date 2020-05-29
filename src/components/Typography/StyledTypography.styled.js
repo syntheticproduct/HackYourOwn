@@ -5,10 +5,10 @@ import { useTheme } from "@material-ui/core/styles";
 
 export const Heading = ({ text }) => (
   <>
-    <Typography variant="h4" align="center">
+    <Typography style={{margin: '30px 0'}} variant="h4" align="center">
       {text}
     </Typography>
-    <Divider />
+    <Divider style={{margin: '30px 0'}} />
   </>
 );
 
