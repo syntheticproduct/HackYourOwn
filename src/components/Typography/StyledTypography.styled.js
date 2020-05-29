@@ -19,8 +19,41 @@ export function Body({ children }) {
     <Typography
       variant="body1"
       color="textSecondary"
-      paragraph
-      style={{ padding: theme.spacing(1, 0, 1) }}
+      style={{ padding: theme.spacing(1, 0, 0) }}
+      align="center"
+    >
+      {children}
+    </Typography>
+  );
+}
+
+export function BodyParagraph({ children }) {
+  const theme = useTheme();
+
+  return (
+    <Typography
+      variant="body1"
+      color="textSecondary"
+      style={{
+        padding: theme.spacing(0, 0, 0),
+      }}
+      align="center"
+    >
+      {children}
+    </Typography>
+  );
+}
+
+export function BodyEnd({ children }) {
+  const theme = useTheme();
+
+  return (
+    <Typography
+      variant="body1"
+      color="textSecondary"
+      style={{
+        padding: theme.spacing(0, 0, 1),
+      }}
       align="center"
     >
       {children}
