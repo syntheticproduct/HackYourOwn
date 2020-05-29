@@ -77,7 +77,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MobileDrawer({ staff = false, student = false }) {
+export default function MobileDrawer() {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -126,7 +126,7 @@ export default function MobileDrawer({ staff = false, student = false }) {
           </IconButton>
         </div>
         <Divider />
-        <Menu staff={staff} student={student} />
+        <Menu/>
       </Drawer>
     </>
   );
@@ -163,21 +163,16 @@ const useStyles2 = makeStyles((theme) => ({
   },
 }));
 
-export function Menu({match, staff = false, student = false }) {
+export function Menu({match}) {
   const classes = useStyles2();
 
   const menu1 = {
     menu: "OUR STORIES",
-    topic1: { desc: "Meet our Staff", href: "/staff" },
-    topic2: { desc: "Meet our Students", href: "/students" },
+    topic1: { desc: "Our Program", href: "/program" },
+    topic2: { desc: "Meet our Staff", href: "/staff" },
+    topic3: { desc: "Meet our Students", href: "/students" },
+    topic4: { desc: "Get Involved", href: "/get-involved" },
   };
-
-  if (staff) {
-    menu1["topic1"] = { desc: "Our Program", href: "/" };
-  }
-  if (student) {
-    menu1["topic2"] = { desc: "Our Program", href: "/" };
-  }
 
   const [open, setOpen] = React.useState(false);
 
@@ -195,12 +190,17 @@ export function Menu({match, staff = false, student = false }) {
               <Button>{menu1["menu"]}</Button>
               <div className={classes.dropdownContent}>
                */}
-               
               <Link href={menu1["topic1"]["href"]}>
                 <Button>{menu1["topic1"]["desc"]}</Button>
               </Link>
               <Link href={menu1["topic2"]["href"]}>
                 <Button>{menu1["topic2"]["desc"]}</Button>
+              </Link>
+              <Link href={menu1["topic3"]["href"]}>
+                <Button>{menu1["topic3"]["desc"]}</Button>
+              </Link>
+              <Link href={menu1["topic4"]["href"]}>
+                <Button>{menu1["topic4"]["desc"]}</Button>
               </Link>
               {/*
               </div>  */}
@@ -247,7 +247,44 @@ export function Menu({match, staff = false, student = false }) {
                   />
                 </ListItem>
               </List>
-
+              <List component="div" disablePadding>
+                <ListItem
+                  button
+                  className={classes.nested}
+                  component="a"
+                  href={menu1["topic3"]["href"]}
+                >
+                  <ListItemText
+                    disableTypography
+                    primary={
+                      <Typography component="div">
+                        <Box fontWeight="fontWeightBold" m={1}>
+                          {menu1["topic3"]["desc"]}
+                        </Box>
+                      </Typography>
+                    }
+                  />
+                </ListItem>
+              </List>
+              <List component="div" disablePadding>
+                <ListItem
+                  button
+                  className={classes.nested}
+                  component="a"
+                  href={menu1["topic4"]["href"]}
+                >
+                  <ListItemText
+                    disableTypography
+                    primary={
+                      <Typography component="div">
+                        <Box fontWeight="fontWeightBold" m={1}>
+                          {menu1["topic4"]["desc"]}
+                        </Box>
+                      </Typography>
+                    }
+                  />
+                </ListItem>
+              </List>
               {/*
                 {open ? (
                   <FontAwesomeIcon

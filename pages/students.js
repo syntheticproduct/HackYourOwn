@@ -4,7 +4,7 @@ import StudentBody from "body/StudentBody";
 
 export default function Index() {
   return (
-    <RootLayout title="Students | HYO" student>
+    <RootLayout title="Students | HYO">
       <StudentBody />
     </RootLayout>
   );

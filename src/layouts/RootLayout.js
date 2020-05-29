@@ -2,9 +2,9 @@ import Box from "@material-ui/core/Box";
 import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
 import TopBar from "appbar";
-import { BigCard } from "components/cards";
-import Hero from "components/hero";
+import BigCard from "components/Cards/BigCard";
 import Copyright from "components/Copyright/Copyright";
+import Hero from "components/hero";
 import Head from "next/head";
 import React from "react";
 
@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function RootLayout({children, title, staff, student}) {
+export default function RootLayout({ children, title = "Home | HYO" }) {
   const classes = useStyles();
   return (
     <>
@@ -25,13 +25,11 @@ export default function RootLayout({children, title, staff, student}) {
         <title>{title}</title>
       </Head>
       <div className={classes.background}>
-        <TopBar staff={staff} student={student}/>
+        <TopBar />
         <Container maxWidth="xl">
           <Hero />
           <Box my={4}>
-            <BigCard>
-              {children}
-            </BigCard>
+            <BigCard>{children}</BigCard>
             <Copyright />
           </Box>
         </Container>
