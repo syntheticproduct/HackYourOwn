@@ -171,6 +171,7 @@ export function Menu({match}) {
     topic1: { desc: "Our Program", href: "/program" },
     topic2: { desc: "Meet our Staff", href: "/staff" },
     topic3: { desc: "Meet our Students", href: "/students" },
+    topic4: { desc: "Get Involved", href: "/get-involved" },
   };
 
   const [open, setOpen] = React.useState(false);
@@ -197,6 +198,9 @@ export function Menu({match}) {
               </Link>
               <Link href={menu1["topic3"]["href"]}>
                 <Button>{menu1["topic3"]["desc"]}</Button>
+              </Link>
+              <Link href={menu1["topic4"]["href"]}>
+                <Button>{menu1["topic4"]["desc"]}</Button>
               </Link>
               {/*
               </div>  */}
@@ -262,7 +266,25 @@ export function Menu({match}) {
                   />
                 </ListItem>
               </List>
-
+              <List component="div" disablePadding>
+                <ListItem
+                  button
+                  className={classes.nested}
+                  component="a"
+                  href={menu1["topic4"]["href"]}
+                >
+                  <ListItemText
+                    disableTypography
+                    primary={
+                      <Typography component="div">
+                        <Box fontWeight="fontWeightBold" m={1}>
+                          {menu1["topic4"]["desc"]}
+                        </Box>
+                      </Typography>
+                    }
+                  />
+                </ListItem>
+              </List>
               {/*
                 {open ? (
                   <FontAwesomeIcon
