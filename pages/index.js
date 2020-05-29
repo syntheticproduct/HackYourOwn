@@ -10,7 +10,7 @@ import React from 'react';
 
 export default function Index() {
   return (
-    <RootLayout title="Home | HYO">
+    <RootLayout>
       <Container maxWidth="md">
         <AboutSection />
         <GoalSection />
