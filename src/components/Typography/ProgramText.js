@@ -4,6 +4,7 @@ import {
   BodyParagraph,
   BodyEnd,
 } from "components/Typography/StyledTypography.styled";
+import { ProgramList, TimelineList } from "components/List/ProgramList";
 
 export function ProjectSection() {
   return (
@@ -47,7 +48,12 @@ export function LearnerSection() {
         on. Mentors and volunteers will also help you pick projects that will
         match your professional goals and look the best on your resume.
       </BodyParagraph>
-      
+      <ProgramList />
+      <BodyParagraph>
+        More details about course content and schedule for the Learner track can
+        be found below:
+      </BodyParagraph>
+      <TimelineList />
     </>
   );
 }
