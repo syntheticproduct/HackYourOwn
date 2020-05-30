@@ -29,7 +29,9 @@ export default function RootLayout({ children, title = "Home | HYO" }) {
         <Container maxWidth="xl">
           <Hero />
           <Box my={4}>
-            <BigCard>{children}</BigCard>
+            <BigCard>
+              <Container maxWidth="md">{children}</Container>
+            </BigCard>
             <Copyright />
           </Box>
         </Container>
