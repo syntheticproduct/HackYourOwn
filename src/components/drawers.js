@@ -169,9 +169,9 @@ export function Menu({match}) {
   const menu1 = {
     menu: "OUR STORIES",
     topic1: { desc: "Our Program", href: "/program" },
-    topic2: { desc: "Meet our Staff", href: "/staff" },
-    topic3: { desc: "Meet our Students", href: "/students" },
-    topic4: { desc: "Get Involved", href: "/get-involved" },
+    topic2: { desc: "Get Involved", href: "/get-involved" },
+    topic3: { desc: "Meet our Staff", href: "/staff" },
+    topic4: { desc: "Meet our Students", href: "/students" },
   };
 
   const [open, setOpen] = React.useState(false);
@@ -210,80 +210,68 @@ export function Menu({match}) {
           return (
             <List>
               <List component="div" disablePadding>
-                <ListItem
-                  button
-                  className={classes.nested}
-                  component="a"
-                  href={menu1["topic1"]["href"]}
-                >
-                  <ListItemText
-                    disableTypography
-                    primary={
-                      <Typography component="div">
-                        <Box fontWeight="fontWeightBold" m={1}>
-                          {menu1["topic1"]["desc"]}
-                        </Box>
-                      </Typography>
-                    }
-                  />
-                </ListItem>
+                <Link href={menu1["topic1"]["href"]}>
+                  <ListItem button className={classes.nested} component="a">
+                    <ListItemText
+                      disableTypography
+                      primary={
+                        <Typography component="div">
+                          <Box fontWeight="fontWeightBold" m={1}>
+                            {menu1["topic1"]["desc"]}
+                          </Box>
+                        </Typography>
+                      }
+                    />
+                  </ListItem>
+                </Link>
               </List>
               <List component="div" disablePadding>
-                <ListItem
-                  button
-                  className={classes.nested}
-                  component="a"
-                  href={menu1["topic2"]["href"]}
-                >
-                  <ListItemText
-                    disableTypography
-                    primary={
-                      <Typography component="div">
-                        <Box fontWeight="fontWeightBold" m={1}>
-                          {menu1["topic2"]["desc"]}
-                        </Box>
-                      </Typography>
-                    }
-                  />
-                </ListItem>
+                <Link href={menu1["topic2"]["href"]}>
+                  <ListItem button className={classes.nested} component="a">
+                    <ListItemText
+                      disableTypography
+                      primary={
+                        <Typography component="div">
+                          <Box fontWeight="fontWeightBold" m={1}>
+                            {menu1["topic2"]["desc"]}
+                          </Box>
+                        </Typography>
+                      }
+                    />
+                  </ListItem>
+                </Link>
               </List>
               <List component="div" disablePadding>
-                <ListItem
-                  button
-                  className={classes.nested}
-                  component="a"
-                  href={menu1["topic3"]["href"]}
-                >
-                  <ListItemText
-                    disableTypography
-                    primary={
-                      <Typography component="div">
-                        <Box fontWeight="fontWeightBold" m={1}>
-                          {menu1["topic3"]["desc"]}
-                        </Box>
-                      </Typography>
-                    }
-                  />
-                </ListItem>
+                <Link href={menu1["topic3"]["href"]}>
+                  <ListItem button className={classes.nested} component="a">
+                    <ListItemText
+                      disableTypography
+                      primary={
+                        <Typography component="div">
+                          <Box fontWeight="fontWeightBold" m={1}>
+                            {menu1["topic3"]["desc"]}
+                          </Box>
+                        </Typography>
+                      }
+                    />
+                  </ListItem>
+                </Link>
               </List>
               <List component="div" disablePadding>
-                <ListItem
-                  button
-                  className={classes.nested}
-                  component="a"
-                  href={menu1["topic4"]["href"]}
-                >
-                  <ListItemText
-                    disableTypography
-                    primary={
-                      <Typography component="div">
-                        <Box fontWeight="fontWeightBold" m={1}>
-                          {menu1["topic4"]["desc"]}
-                        </Box>
-                      </Typography>
-                    }
-                  />
-                </ListItem>
+                <Link href={menu1["topic4"]["href"]}>
+                  <ListItem button className={classes.nested} component="a">
+                    <ListItemText
+                      disableTypography
+                      primary={
+                        <Typography component="div">
+                          <Box fontWeight="fontWeightBold" m={1}>
+                            {menu1["topic4"]["desc"]}
+                          </Box>
+                        </Typography>
+                      }
+                    />
+                  </ListItem>
+                </Link>
               </List>
               {/*
                 {open ? (

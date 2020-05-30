@@ -1,8 +1,9 @@
+import { ProgramList, TimelineList } from "components/List/ProgramList";
 import {
-  Heading,
   Body,
-  BodyParagraph,
   BodyEnd,
+  BodyParagraph,
+  Heading,
 } from "components/Typography/StyledTypography.styled";
 
 export function ProjectSection() {
@@ -47,7 +48,19 @@ export function LearnerSection() {
         on. Mentors and volunteers will also help you pick projects that will
         match your professional goals and look the best on your resume.
       </BodyParagraph>
-      
+      <ProgramList />
+      <BodyParagraph>
+        More details about course content and schedule for the Learner track can
+        be found below:
+      </BodyParagraph>
+      <TimelineList />
+      <BodyParagraph>
+        <i>
+          *Note: there may be a small cost for course materials for weeks 5-8
+          (maximum of $20) due to the use of outside materials for our
+          curriculum.
+        </i>
+      </BodyParagraph>
     </>
   );
 }
