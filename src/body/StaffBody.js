@@ -314,6 +314,18 @@ export default function StaffBody() {
             <Typography varaint="subtitle1">Volunteer, Engineer</Typography>
           </Paper>
         </Grid>
+        <Grid item xs={12} sm={6} lg={3}>
+          <Paper className={classes.paper}>
+            <Avatar
+              alt="S"
+              src="/images/staff/sabrina.png"
+              align="center"
+              className={classes.large}
+            />
+            <Typography variant="h6">Sabrina</Typography>
+            <Typography varaint="subtitle1">Project Lead (Cohort)</Typography>
+          </Paper>
+        </Grid>
       </Grid>
     </Container>
   );
