@@ -6,6 +6,7 @@ import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Avatar from "@material-ui/core/Avatar";
 import Link from "@material-ui/core/Link";
+import { StudentGrabber } from "components/Typography/StudentText";
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -48,9 +49,7 @@ export default function StudentBody() {
 
   return (
     <Container maxWidth="lg">
-      <Typography variant="h5" align="center" className={classes.subheader}>
-        More than 500 people have applied to the program already, from all over the world. Please meet some of them:
-      </Typography>
+      <StudentGrabber />
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Paper className={classes.paper}>
