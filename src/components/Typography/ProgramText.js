@@ -1,10 +1,10 @@
-import {
-  Heading,
-  Body,
-  BodyParagraph,
-  BodyEnd,
-} from "components/Typography/StyledTypography.styled";
 import { ProgramList, TimelineList } from "components/List/ProgramList";
+import {
+  Body,
+  BodyEnd,
+  BodyParagraph,
+  Heading,
+} from "components/Typography/StyledTypography.styled";
 
 export function ProjectSection() {
   return (
@@ -54,6 +54,13 @@ export function LearnerSection() {
         be found below:
       </BodyParagraph>
       <TimelineList />
+      <BodyParagraph>
+        <i>
+          *Note: there may be a small cost for course materials for weeks 5-8
+          (maximum of $20) due to the use of outside materials for our
+          curriculum.
+        </i>
+      </BodyParagraph>
     </>
   );
 }
