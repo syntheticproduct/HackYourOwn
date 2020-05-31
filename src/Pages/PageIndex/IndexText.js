@@ -1,5 +1,5 @@
 import { Heading, Body } from "components/Typography/StyledTypography.styled";
-import { Link } from "next/link"
+import { Link } from "@material-ui/core"
 
 export function AboutSection() {
   return (
