@@ -11,12 +11,12 @@ export const AvatarCards = ({ src, name, children }) => (
   </Grid>
 );
 
-export const NoPictureAvatarCards = ({ name, text }) => (
+export const NoPictureAvatarCards = ({ name, children }) => (
   <Grid item xs={12}>
     <StyledPaper>
       <StyledAvatar align="center">{name.charAt(0)}</StyledAvatar>
       <Typography variant="h6">{name}</Typography>
-      <Typography varaint="subtitle1">{text}</Typography>
+      <Typography varaint="subtitle1">{children}</Typography>
     </StyledPaper>
   </Grid>
 );
