@@ -7,6 +7,7 @@ import Grid from "@material-ui/core/Grid";
 import Avatar from "@material-ui/core/Avatar";
 import Link from "@material-ui/core/Link";
 import { StudentGrabber } from "components/Typography/StudentText";
+import { FirstStudent } from "components/Cards/StudentCards";
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -51,32 +52,7 @@ export default function StudentBody() {
     <Container maxWidth="lg">
       <StudentGrabber />
       <Grid container spacing={3}>
-        <Grid item xs={12}>
-          <Paper className={classes.paper}>
-            <Avatar
-              alt="Jake"
-              src="/images/students/jake.jpg"
-              align="center"
-              className={classes.large}
-            />
-            <Typography variant="h6">Jake B.</Typography>
-            <Typography varaint="subtitle1">
-              Hey everyone! I'm Jake and I am a rising junior studying Computer
-              Science at the University of Massachusetts Boston. Last Summer I
-              was a web development intern at a company that offered me a role
-              as a software development intern this Summer. Unfortunately that
-              was rescinded due to COVID-19, so I am looking to put my skills to
-              good work. I have experience with web development and this year I
-              was one of fifteen people selected to take a course offered at
-              Google's Cambridge offices in Android development
-            </Typography>
-            <Typography varaint="subtitle1">
-              (you can see my final project
-              <Link href="https://github.com/jpbates13/ubored"> here!</Link>
-              ).
-            </Typography>
-          </Paper>
-        </Grid>
+        <FirstStudent />
         <Grid item xs={12}>
           <Paper className={classes.paper}>
             <Avatar align="center" className={classes.large}>
