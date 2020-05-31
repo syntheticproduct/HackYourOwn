@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export function IndexCards() {
+export function InvolvedCards() {
   const classes = useStyles();
 
   return (

@@ -1,5 +1,4 @@
 import { Heading, Body } from "components/Typography/StyledTypography.styled";
-import { IndexCards } from "components/Cards/IndexCards";
 
 export function AboutSection() {
   return (
@@ -45,15 +44,6 @@ export function WhoWeAreSection() {
         We are senior developers and tech leads from major US companies. Bios
         will be added to this site soon. For now, view our staff page here.
       </Body>
-    </>
-  );
-}
-
-export function SupportSection() {
-  return (
-    <>
-      <Heading text="Get Involved" />
-      <IndexCards />
     </>
   );
 }

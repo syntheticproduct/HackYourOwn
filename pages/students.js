@@ -7,8 +7,8 @@ import {
   FourthStudent,
   SecondStudent,
   ThirdStudent,
-} from "components/Cards/StudentCards";
-import { StudentGrabber } from "components/Typography/StudentText";
+} from "Pages/PageStudent/StudentCards";
+import { StudentGrabber } from "Pages/PageStudent/StudentText";
 
 export default function Index() {
   return (
