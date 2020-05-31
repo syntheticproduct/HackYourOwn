@@ -1,4 +1,5 @@
 import { Heading, Body } from "components/Typography/StyledTypography.styled";
+import { Link } from "next/link"
 
 export function AboutSection() {
   return (
@@ -42,7 +43,8 @@ export function WhoWeAreSection() {
       <Heading text="Who we are" />
       <Body>
         We are senior developers and tech leads from major US companies. Bios
-        will be added to this site soon. For now, view our staff page here.
+        will be added to this site soon. For now, view our staff page{" "}
+        <Link href="/staff">here</Link>.
       </Body>
     </>
   );
