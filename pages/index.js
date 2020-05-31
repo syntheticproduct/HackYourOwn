@@ -3,7 +3,7 @@ import {
   AboutSection,
   GoalSection,
   WhoWeAreSection,
-} from "components/Typography/IndexText";
+} from "Pages/PageIndex/IndexText";
 import React from "react";
 
 export default function Index() {

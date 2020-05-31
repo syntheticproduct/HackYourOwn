@@ -5,12 +5,23 @@ import { useTheme } from "@material-ui/core/styles";
 
 export const Heading = ({ text }) => (
   <>
-    <Typography style={{margin: '30px 0'}} variant="h4" align="center">
+    <Typography style={{ margin: "30px 0" }} variant="h4" align="center">
       {text}
     </Typography>
-    <Divider style={{margin: '30px 0'}} />
+    <HeadDivider />
   </>
 );
+
+export const SubHeading = ({ text }) => (
+  <>
+    <Typography style={{ margin: "30px 0" }} variant="h5" align="center">
+      {text}
+    </Typography>
+    <HeadDivider />
+  </>
+);
+
+const HeadDivider = () => <Divider style={{ margin: "30px 0" }} />;
 
 export function Body({ children }) {
   const theme = useTheme();
