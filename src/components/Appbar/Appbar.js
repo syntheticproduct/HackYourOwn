@@ -1,9 +1,10 @@
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 import IconButton from "@material-ui/core/IconButton";
-import Dropdown from "components/dropdown";
+import MobileDrawer, { Menu } from "components/Appbar/Drawers";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 const useStyles = makeStyles((theme) => ({
   white: {
@@ -23,6 +24,15 @@ const useStyles = makeStyles((theme) => ({
 
 export default function TopBar() {
   const classes = useStyles();
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("sm"));
+  let menu;
+
+  if (matches) {
+    menu = <Menu match={true} />;
+  } else {
+    menu = <MobileDrawer />;
+  }
 
   return (
     <AppBar position="sticky" color="inherit" className={classes.title}>
@@ -34,7 +44,7 @@ export default function TopBar() {
         <Typography variant="h6" className={classes.title}>
           Hack Your Own
         </Typography>
-        <Dropdown />
+        {menu}
       </Toolbar>
     </AppBar>
   );
