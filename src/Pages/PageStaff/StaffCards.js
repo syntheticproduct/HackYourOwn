@@ -1,13 +1,30 @@
-import { ResponsiveAvatarCards } from "components/Cards/AvatarCards.styled";
 import Grid from "@material-ui/core/Grid";
+import { ResponsiveAvatarCards } from "components/Cards/AvatarCards.styled";
 
 export function StaffCards() {
   return (
     <Grid container spacing={3}>
+      <Alli />
+      <Kenny />
+      <Mahad />
+      <Tye />
+      <Johnathan />
+      <Kevin />
+      <Rykuno />
+      <Hendrix />
+      <Lyndon />
+      <David />
+      <Fabian />
+      <Jae />
+    </Grid>
+  );
+}
+
+export function LeadershipStaffCards() {
+  return (
+    <Grid container spacing={3}>
       <Camille />
       <Aryan />
-      <Jae />
-      <Hendrix />
       <Isabella />
       <Paul />
       <Binvant />
@@ -15,23 +32,10 @@ export function StaffCards() {
       <Coleman />
       <Leo />
       <Jenn />
-      <Lyndon />
-      <David />
-      <Fabian />
-      <Kevin />
-      <Rykuno />
-      <Alli />
-      <Kenny />
-      <Mahad />
-      <Tye />
-      <Johnathan />
       <Sabrina />
     </Grid>
   );
 }
-
-// Step 1: In the future when we organize by names, I want them to be functions exported from here using the functions of each person.
-// Step 2: Check staff.js when you export.
 
 const Camille = () => (
   <ResponsiveAvatarCards src="/images/staff/camille.png" name="Camille">
