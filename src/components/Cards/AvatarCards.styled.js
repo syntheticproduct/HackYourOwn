@@ -11,8 +11,8 @@ export const AvatarCards = ({ src, name, children }) => (
   </Grid>
 );
 
-export const ResponsiveAvatarCards = ({ src, name, children }) => (
-  <Grid item xs={12} sm={6} lg={3}>
+export const ResponsiveAvatarCards = ({ src, name, children, lg }) => (
+  <Grid item xs={12} sm={6} lg={lg || 3}>
     <StyledHeightPaper>
       <StyledAvatar alt={name.charAt(0)} src={src} align="center" />
       <Typography variant="h6">{name}</Typography>
