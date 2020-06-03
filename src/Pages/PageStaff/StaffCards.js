@@ -1,32 +1,49 @@
 import { ResponsiveAvatarCards } from "components/Cards/AvatarCards.styled";
+import { SubHeading } from "components/Typography/StyledTypography.styled";
 import Grid from "@material-ui/core/Grid";
+import { Typography } from "@material-ui/core";
 
 export function StaffCards() {
   return (
-    <Grid container spacing={3}>
-      <Camille />
-      <Aryan />
-      <Jae />
-      <Hendrix />
-      <Isabella />
-      <Paul />
-      <Binvant />
-      <Josh />
-      <Coleman />
-      <Leo />
-      <Jenn />
-      <Lyndon />
-      <David />
-      <Fabian />
-      <Kevin />
-      <Rykuno />
-      <Alli />
-      <Kenny />
-      <Mahad />
-      <Tye />
-      <Johnathan />
-      <Sabrina />
-    </Grid>
+    <>  
+      <Grid container spacing={3}>
+        <Alli />
+        <Kenny />
+        <Mahad />
+        <Tye />
+        <Johnathan />
+        <Kevin />
+        <Rykuno />
+        <Hendrix />
+        <Lyndon />
+        <David />
+        <Fabian />
+        <Jae />
+      </Grid>
+      <SubHeading text="The HackYourOwn Leadership Team" />
+      <Typography>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed eu sem facilisis, auctor arcu nec, dictum dui. 
+        Etiam ultrices interdum accumsan. Aenean eu ligula ex. 
+        In ac diam tristique, sagittis ipsum nec, aliquam metus. 
+        Sed et rutrum ex, eget dictum odio. Vivamus pharetra justo urna, 
+        a convallis magna accumsan ac. Nunc pharetra diam ac nibh 
+        sollicitudin, sit amet bibendum augue iaculis.
+      </Typography>
+      <SubHeading text="Leadership Team Members" />
+      <Grid container spacing={3}>
+        <Camille />
+        <Aryan />
+        <Isabella />
+        <Paul />
+        <Binvant />
+        <Josh />
+        <Coleman />
+        <Leo />
+        <Jenn />
+        <Sabrina />
+      </Grid>
+    </>  
   );
 }
 
