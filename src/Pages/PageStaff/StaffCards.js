@@ -1,54 +1,41 @@
-import { ResponsiveAvatarCards } from "components/Cards/AvatarCards.styled";
-import { SubHeading } from "components/Typography/StyledTypography.styled";
 import Grid from "@material-ui/core/Grid";
-import { Typography } from "@material-ui/core";
+import { ResponsiveAvatarCards } from "components/Cards/AvatarCards.styled";
 
 export function StaffCards() {
   return (
-    <>  
-      <Grid container spacing={3}>
-        <Alli />
-        <Kenny />
-        <Mahad />
-        <Tye />
-        <Johnathan />
-        <Kevin />
-        <Rykuno />
-        <Hendrix />
-        <Lyndon />
-        <David />
-        <Fabian />
-        <Jae />
-      </Grid>
-      <SubHeading text="The HackYourOwn Leadership Team" />
-      <Typography>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Sed eu sem facilisis, auctor arcu nec, dictum dui. 
-        Etiam ultrices interdum accumsan. Aenean eu ligula ex. 
-        In ac diam tristique, sagittis ipsum nec, aliquam metus. 
-        Sed et rutrum ex, eget dictum odio. Vivamus pharetra justo urna, 
-        a convallis magna accumsan ac. Nunc pharetra diam ac nibh 
-        sollicitudin, sit amet bibendum augue iaculis.
-      </Typography>
-      <SubHeading text="Leadership Team Members" />
-      <Grid container spacing={3}>
-        <Camille />
-        <Aryan />
-        <Isabella />
-        <Paul />
-        <Binvant />
-        <Josh />
-        <Coleman />
-        <Leo />
-        <Jenn />
-        <Sabrina />
-      </Grid>
-    </>  
+    <Grid container spacing={3}>
+      <Alli />
+      <Kenny />
+      <Mahad />
+      <Tye />
+      <Johnathan />
+      <Kevin />
+      <Rykuno />
+      <Hendrix />
+      <Lyndon />
+      <David />
+      <Fabian />
+      <Jae />
+    </Grid>
   );
 }
 
-// Step 1: In the future when we organize by names, I want them to be functions exported from here using the functions of each person.
-// Step 2: Check staff.js when you export.
+export function LeadershipStaffCards() {
+  return (
+    <Grid container spacing={3}>
+      <Camille />
+      <Aryan />
+      <Isabella />
+      <Paul />
+      <Binvant />
+      <Josh />
+      <Coleman />
+      <Leo />
+      <Jenn />
+      <Sabrina />
+    </Grid>
+  );
+}
 
 const Camille = () => (
   <ResponsiveAvatarCards src="/images/staff/camille.png" name="Camille">

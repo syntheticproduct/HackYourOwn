@@ -1,6 +1,11 @@
 import RootLayout from "layouts/RootLayout";
-import { StaffCards } from "Pages/PageStaff/StaffCards";
-import { StaffGrabber } from "Pages/PageStaff/StaffText";
+import { StaffCards, LeadershipStaffCards } from "Pages/PageStaff/StaffCards";
+import {
+  StaffGrabber,
+  StaffLeadershipPurpose,
+  StaffLeadershipTeam,
+  StaffLeadershipText,
+} from "Pages/PageStaff/StaffText";
 import React from "react";
 
 export default function Staff() {
@@ -8,7 +13,10 @@ export default function Staff() {
     <RootLayout title="Staff | HYO">
       <StaffGrabber />
       <StaffCards />
-      {/* Step 3: Make a subheading then use the cards. */}
+      <StaffLeadershipPurpose />
+      <StaffLeadershipText />
+      <StaffLeadershipTeam />
+      <LeadershipStaffCards />
     </RootLayout>
   );
 }
