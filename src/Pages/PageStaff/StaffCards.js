@@ -9,10 +9,7 @@ export function StaffCards() {
       <Mahad />
       <Tye />
       <Johnathan />
-      <Kevin />
-      <Rykuno />
       <Hendrix />
-      <Lyndon />
       <David />
       <Fabian />
       <Jae />
@@ -103,12 +100,6 @@ const Jenn = () => (
   </ResponsiveAvatarCards>
 );
 
-const Lyndon = () => (
-  <ResponsiveAvatarCards src="/images/staff/lyndon.jpg" name="Lyndon">
-    Cohort Advisor, Mentor
-  </ResponsiveAvatarCards>
-);
-
 const David = () => (
   <ResponsiveAvatarCards src="/images/staff/david.jpg" name="David">
     Cohort Associate, Mentor
@@ -118,18 +109,6 @@ const David = () => (
 const Fabian = () => (
   <ResponsiveAvatarCards src="/images/staff/fabian.png" name="Fabian">
     Cohort Associate
-  </ResponsiveAvatarCards>
-);
-
-const Kevin = () => (
-  <ResponsiveAvatarCards src="/images/staff/kevin.png" name="Kevin">
-    Mentor
-  </ResponsiveAvatarCards>
-);
-
-const Rykuno = () => (
-  <ResponsiveAvatarCards src="/images/staff/rykuno.jpg" name="Rykuno">
-    Mentor
   </ResponsiveAvatarCards>
 );
 
