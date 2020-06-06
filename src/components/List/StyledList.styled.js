@@ -20,26 +20,23 @@ export const StyledList = ({ text, icon }) => {
 
 export const TitleStyledList = ({ title, text, icon }) => {
   return (
-    <List style={{ paddingTop: 0, paddingBottom: 0 }}>
-      <ListItem style={{ paddingTop: 0, paddingBottom: 0 }}>
+      <ListItem style={{ paddingTop: 0, paddingBottom: 0, margin: 0, display: "list-item" }}>
         <ListItemText
           disableTypography
           primary={
             <>
               <Typography
                 variant="h6"
-                align="center"
                 style={{ textDecoration: "underline" }}
               >
                 {title}
               </Typography>
-              <Typography variant="body1" align="center" color="textSecondary">
+              <Typography variant="body1" color="textSecondary">
                 {text}
               </Typography>
             </>
           }
         />
       </ListItem>
-    </List>
   );
 };

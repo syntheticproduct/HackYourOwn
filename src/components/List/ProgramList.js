@@ -1,5 +1,6 @@
 import { StyledList, TitleStyledList } from "components/List/StyledList.styled";
 import { faStar } from "@fortawesome/free-regular-svg-icons";
+import { List, ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
 
 export const ProgramList = () => {
   return (
@@ -18,7 +19,7 @@ export const ProgramList = () => {
 
 export const TimelineList = () => {
   return (
-    <>
+    <List style={{listStyleType: "circle", borderLeft: "2px solid #000", margin: "0 auto", width: "40%"}}>
       <TitleStyledList
         title="Week 1:"
         text="Git / GitHub, Basics of HTML, Basics of CSS"
@@ -29,7 +30,7 @@ export const TimelineList = () => {
       />
       <TitleStyledList
         title="Week 3:"
-        text="Advanced JavaScript (ES6, classes, modules), Functional programming in JavaScript"
+        text="Advanced JavaScript (ES6, classes, modules),Functional programming in JavaScript"
       />
       <TitleStyledList
         title="Week 4:"
@@ -43,6 +44,6 @@ export const TimelineList = () => {
         title="Week 9-12:"
         text="Capstone Project (full-stack MERN project)"
       />
-    </>
+    </List>
   );
 };

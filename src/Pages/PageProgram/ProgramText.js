@@ -5,6 +5,7 @@ import {
   BodyParagraph,
   Heading,
 } from "components/Typography/StyledTypography.styled";
+import Grid from "@material-ui/core/Grid";
 
 export function ProjectSection() {
   return (
@@ -32,22 +33,34 @@ export function LearnerSection() {
   return (
     <>
       <Heading text="Learner Track" />
-      <Body>
-        The Learner Track for Hack Your Own will focus on teaching full-stack
-        web development using the MERN stack (MongoDB, Express, React, and
-        Node.js). Over the next 12 weeks, our goal is to get you familiar with
-        front-end and back-end web development through{" "}
-        <b> practical coding lessons </b>
-        and a capstone project. The Learner track program will run from Monday,
-        June 1st, 2020 to Friday, August 21st, 2020, according to the following
-        structure:
-      </Body>
-      <BodyParagraph>
-        These projects will be <b>mentored by industry professionals</b> to
-        ensure and give feedback on code quality, best practices, design, and so
-        on. Mentors and volunteers will also help you pick projects that will
-        match your professional goals and look the best on your resume.
-      </BodyParagraph>
+      <Grid container spacing={3}>
+        <Grid item xs={12} md={6}>
+          <Body>
+            The Learner Track for Hack Your Own will focus on teaching full-stack
+            web development using the MERN stack (MongoDB, Express, React, and
+            Node.js). Over the next 12 weeks, our goal is to get you familiar with
+            front-end and back-end web development through{" "}
+            <b> practical coding lessons </b>
+            and a capstone project. The Learner track program will run from Monday,
+            June 1st, 2020 to Friday, August 21st, 2020, according to the following
+            structure:
+          </Body>
+        </Grid>
+        <Grid justify="center" container md={6}>
+          <img style={{width: "400px"}} src="/images/react.png" />
+        </Grid>
+        <Grid justify="center" container md={6}>
+          <img style={{width: "400px"}} src="/images/experts.png" />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <BodyParagraph>
+            These projects will be <b>mentored by industry professionals</b> to
+            ensure and give feedback on code quality, best practices, design, and so
+            on. Mentors and volunteers will also help you pick projects that will
+            match your professional goals and look the best on your resume.
+          </BodyParagraph>
+        </Grid>
+      </Grid>
       <ProgramList />
       <BodyParagraph>
         More details about course content and schedule for the Learner track can
