@@ -26,15 +26,26 @@
   "settings": {
     "react": {
       "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": [
+          "src",
+          "node_modules"
+        ]
+      }
     }
   },
   "rules": {
     "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/forbid-prop-types": "off",
     "react/jsx-filename-extension": "off",
     "quotes": [
       "error",
       "double"
-    ]
+    ],
+    "linebreak-style": "off"
   },
   "plugins": []
 }
