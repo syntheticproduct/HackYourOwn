@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
 export default function TopBar() {
   const classes = useStyles();
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up("sm"));
+  const matches = useMediaQuery(theme.breakpoints.up("md"));
   let menu;
 
   if (matches) {
