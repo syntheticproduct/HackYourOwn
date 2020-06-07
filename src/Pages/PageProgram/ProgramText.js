@@ -46,10 +46,10 @@ export function LearnerSection() {
             June 1st, 2020 to Friday, August 21st, 2020.
           </Body>
         </Grid>
-        <Grid justify="center" container md={6}>
+        <Grid justify="center" item container md={6}>
           <img style={{maxWidth: "100%"}} src="/images/react.png" />
         </Grid>
-        <Grid justify="center" container md={6}>
+        <Grid justify="center" item container md={6}>
           <img style={{maxWidth: "100%"}} src="/images/experts.png" />
         </Grid>
         <Grid item xs={12} md={6}>
@@ -70,6 +70,13 @@ export function LearnerSection() {
         </Typography>
       </Typography>
       <TimelineList />
+      <BodyParagraph>
+        <i>
+          *Note: there may be a small cost for course materials for weeks 5-8
+          (maximum of $20) due to the use of outside materials for our
+          curriculum.
+        </i>
+      </BodyParagraph>
       <Typography paragraph align="center" style={{maxWidth: "500px", margin: "20px auto"}}>
         <Typography variant="h4">Create</Typography>
         <Typography style={{marginTop: "15px"}}>
@@ -78,13 +85,6 @@ export function LearnerSection() {
           be put in your portfolio and resume.
         </Typography>
       </Typography>
-      <BodyParagraph>
-        <i>
-          *Note: there may be a small cost for course materials for weeks 5-8
-          (maximum of $20) due to the use of outside materials for our
-          curriculum.
-        </i>
-      </BodyParagraph>
     </>
   );
 }

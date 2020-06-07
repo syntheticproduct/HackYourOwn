@@ -6,7 +6,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 const useTimelineStyles = makeStyles({
   root: {
     maxWidth: "70%",
-    margin: "0 auto"
+    margin: "30px auto"
   },
   dFlex: {
     display: "flex"
