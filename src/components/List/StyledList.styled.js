@@ -1,6 +1,8 @@
 import { List, ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Typography } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 export const StyledList = ({ text, icon }) => {
   return (
@@ -18,28 +20,37 @@ export const StyledList = ({ text, icon }) => {
   );
 };
 
-export const TitleStyledList = ({ title, text, icon }) => {
+const useStyles = makeStyles({
+  root: {
+    paddingTop: 0,
+    paddingBottom: 0,
+    margin: 0
+  },
+  left: {
+    textAlign: "right"
+  }
+});
+
+export const TitleStyledList = ({ title, text, icon, left }) => {
+  const classes = useStyles();
   return (
-    <List style={{ paddingTop: 0, paddingBottom: 0 }}>
-      <ListItem style={{ paddingTop: 0, paddingBottom: 0 }}>
+      <ListItem className={classes.root} >
         <ListItemText
+          className={useMediaQuery(theme => theme.breakpoints.down('sm')) ? "" : (left ? classes.left : "")}
           disableTypography
           primary={
             <>
               <Typography
                 variant="h6"
-                align="center"
-                style={{ textDecoration: "underline" }}
               >
                 {title}
               </Typography>
-              <Typography variant="body1" align="center" color="textSecondary">
+              <Typography variant="body1" color="textSecondary">
                 {text}
               </Typography>
             </>
           }
         />
       </ListItem>
-    </List>
   );
 };
