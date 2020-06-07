@@ -20,7 +20,7 @@ export const StyledList = ({ text, icon }) => {
 
 export const TitleStyledList = ({ title, text, icon }) => {
   return (
-      <ListItem style={{ paddingTop: 0, paddingBottom: 0, margin: 0, display: "list-item" }}>
+      <ListItem style={{ paddingTop: 0, paddingBottom: 0, margin: 0 }}>
         <ListItemText
           disableTypography
           primary={
