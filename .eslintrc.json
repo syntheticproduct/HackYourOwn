@@ -40,11 +40,19 @@
     "react/react-in-jsx-scope": "off",
     "react/jsx-props-no-spreading": "off",
     "react/forbid-prop-types": "off",
+    "react/jsx-boolean-value": "off",
     "react/jsx-filename-extension": "off",
     "quotes": [
       "error",
       "double"
     ],
+    "object-curly-newline": [
+      "error",
+      {
+        "multiline": true
+      }
+    ],
+    "react/no-array-index-key": "off",
     "linebreak-style": "off"
   },
   "plugins": []

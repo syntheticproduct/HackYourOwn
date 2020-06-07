@@ -35,9 +35,7 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(2),
   textAlign: "center",
   color: theme.palette.text.secondary,
-  "&:hover": {
-    boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)",
-  },
+  "&:hover": { boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)" },
 }));
 
 const StyledHeightPaper = styled(Paper)(({ theme }) => ({
@@ -45,9 +43,7 @@ const StyledHeightPaper = styled(Paper)(({ theme }) => ({
   textAlign: "center",
   color: theme.palette.text.secondary,
   height: "230px",
-  "&:hover": {
-    boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)",
-  },
+  "&:hover": { boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)" },
 }));
 
 const StyledAvatar = styled(Avatar)(({ theme }) => ({

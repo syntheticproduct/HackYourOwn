@@ -6,20 +6,16 @@ import IconButton from "@material-ui/core/IconButton";
 import MobileDrawer, { Menu } from "components/Appbar/Drawers";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   white: {
     backgroundColor: "white",
     color: "white",
   },
   icon: {
     marginRight: 5,
-    "&:hover": {
-      backgroundColor: "inherit",
-    },
+    "&:hover": { backgroundColor: "inherit" },
   },
-  title: {
-    flexGrow: 1,
-  },
+  title: { flexGrow: 1 },
 }));
 
 export default function TopBar() {
@@ -39,7 +35,7 @@ export default function TopBar() {
       {/* sticky doesn't work on IE 11, but who uses that anyways :) */}
       <Toolbar>
         <IconButton className={classes.icon} href="/" disableRipple>
-          <img src="/images/appbarlogo.png" height={25} width={25} />
+          <img src="/images/appbarlogo.png" alt="appbarlogo" height={25} width={25} />
         </IconButton>
         <Typography variant="h6" className={classes.title}>
           Hack Your Own

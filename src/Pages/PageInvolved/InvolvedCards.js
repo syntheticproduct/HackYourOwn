@@ -5,18 +5,15 @@ import { DiscordButton, DonateButton } from "components/Buttons/Buttons";
 import { SectionButton } from "components/Buttons/StyledButton.styled";
 import { SectionCard } from "components/Cards/SectionCards.styled";
 
-const useStyles = makeStyles((theme) => ({
-  cardGrid: {
-    paddingBottom: theme.spacing(4),
-  },
-}));
+const useStyles = makeStyles((theme) => ({ cardGrid: { paddingBottom: theme.spacing(4) } }));
 
+// eslint-disable-next-line import/prefer-default-export
 export function InvolvedCards() {
   const classes = useStyles();
 
   return (
     <Container className={classes.cardGrid} maxWidth="md">
-      <Grid container spacing={2} justify={"center"}>
+      <Grid container spacing={2} justify="center">
         <Grid item xs={12} sm={6} md={4}>
           <SectionCard
             title="Students"

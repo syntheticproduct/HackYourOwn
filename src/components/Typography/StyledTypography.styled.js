@@ -45,9 +45,7 @@ export function BodyParagraph({ children }) {
     <Typography
       variant="body1"
       color="textSecondary"
-      style={{
-        padding: theme.spacing(0, 0, 0),
-      }}
+      style={{ padding: theme.spacing(0, 0, 0) }}
       align="center"
     >
       {children}
@@ -62,9 +60,7 @@ export function BodyEnd({ children }) {
     <Typography
       variant="body1"
       color="textSecondary"
-      style={{
-        padding: theme.spacing(0, 0, 1),
-      }}
+      style={{ padding: theme.spacing(0, 0, 1) }}
       align="center"
     >
       {children}
