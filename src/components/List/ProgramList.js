@@ -67,7 +67,8 @@ export const TimelineList = () => {
       <div className={classes.dFlex}>
         <div className={classes.left}>
           <TitleStyledList
-            title="Week 1:"
+            left
+            title="Week 1"
             text="Git / GitHub, Basics of HTML, Basics of CSS"
           />
         </div>
@@ -95,7 +96,7 @@ export const TimelineList = () => {
         </div>
         <div className={classes.right} >
           <TitleStyledList
-            title="Week 2:"
+            title="Week 2"
             text="Intro to JavaScript, DOM Manipulation"
           />
         </div>
@@ -103,7 +104,8 @@ export const TimelineList = () => {
       <div className={classes.dFlex}>
         <div className={classes.left} >
           <TitleStyledList
-            title="Week 3:"
+            left
+            title="Week 3"
             text="Advanced JavaScript (ES6, classes, modules), Functional programming in JavaScript"
           />
         </div>
@@ -131,7 +133,7 @@ export const TimelineList = () => {
         </div>
         <div className={classes.right} >
           <TitleStyledList
-            title="Week 4:"
+            title="Week 4"
             text="Javascript Data Structures, NPM, Webpack"
           />
         </div>
@@ -139,7 +141,8 @@ export const TimelineList = () => {
       <div className={classes.dFlex}>
         <div className={classes.left}>
           <TitleStyledList
-            title="Week 5-8:"
+            left
+            title="Week 5-8"
             text="React, Node.js, Express.js, MongoDB, REST APIs*"
           />
         </div>
@@ -164,7 +167,7 @@ export const TimelineList = () => {
         </div>
         <div className={classes.right} >
           <TitleStyledList
-            title="Week 9-12:"
+            title="Week 9-12"
             text="Capstone Project (full-stack MERN project)"
           />
         </div>
