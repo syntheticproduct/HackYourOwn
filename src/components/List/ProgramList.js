@@ -1,23 +1,7 @@
-import { StyledList, TitleStyledList } from "components/List/StyledList.styled";
-import { faStar } from "@fortawesome/free-regular-svg-icons";
+import { TitleStyledList } from "components/List/StyledList.styled";
 import { List } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-
-export const ProgramList = () => {
-  return (
-    <>
-      <StyledList
-        icon={faStar}
-        text="The first 8 weeks will be focused on learning the basics of web development from course material that we will distribute weekly over Discord and video. Small projects will also be assigned to help you build your skills."
-      />
-      <StyledList
-        icon={faStar}
-        text="The last 4 weeks will be focused on using what you’ve learned over the summer to create and showcase a final project in groups of 4-6 Learners, which can be put in your portfolio and resume."
-      />
-    </>
-  );
-}
 
 const useTimelineStyles = makeStyles({
   root: {
@@ -151,26 +135,8 @@ export const TimelineList = () => {
           style={{ order: useMediaQuery(theme => theme.breakpoints.down('sm')) ? -1 : 0 }}
         >
           <TimelineCircle />
-          <div className={classes.dFlex, classes.lines}>
-            <div className={classes.line} />
-          </div>
         </div>
         <div className={classes.right} style={{ width: useMediaQuery(theme => theme.breakpoints.down('sm')) ? 0 : "100%" }} />
-      </div>
-      <div className={classes.dFlex}>
-        <div className={classes.left} style={{ width: useMediaQuery(theme => theme.breakpoints.down('sm')) ? 0 : "100%" }} />
-        <div 
-          className={classes.middle} 
-          style={{ order: useMediaQuery(theme => theme.breakpoints.down('sm')) ? -1 : 0 }}
-        >
-            <TimelineCircle />
-        </div>
-        <div className={classes.right} >
-          <TitleStyledList
-            title="Week 9-12"
-            text="Capstone Project (full-stack MERN project)"
-          />
-        </div>
       </div>
     </List>
   );

@@ -1,4 +1,4 @@
-import { ProgramList, TimelineList } from "components/List/ProgramList";
+import { TimelineList } from "components/List/ProgramList";
 import {
   Body,
   BodyEnd,
@@ -6,6 +6,7 @@ import {
   Heading,
 } from "components/Typography/StyledTypography.styled";
 import Grid from "@material-ui/core/Grid";
+import { Typography } from "@material-ui/core";
 
 export function ProjectSection() {
   return (
@@ -42,15 +43,14 @@ export function LearnerSection() {
             front-end and back-end web development through{" "}
             <b> practical coding lessons </b>
             and a capstone project. The Learner track program will run from Monday,
-            June 1st, 2020 to Friday, August 21st, 2020, according to the following
-            structure:
+            June 1st, 2020 to Friday, August 21st, 2020.
           </Body>
         </Grid>
         <Grid justify="center" container md={6}>
-          <img style={{width: "400px"}} src="/images/react.png" />
+          <img style={{maxWidth: "100%"}} src="/images/react.png" />
         </Grid>
         <Grid justify="center" container md={6}>
-          <img style={{width: "400px"}} src="/images/experts.png" />
+          <img style={{maxWidth: "100%"}} src="/images/experts.png" />
         </Grid>
         <Grid item xs={12} md={6}>
           <BodyParagraph>
@@ -61,12 +61,23 @@ export function LearnerSection() {
           </BodyParagraph>
         </Grid>
       </Grid>
-      <ProgramList />
-      <BodyParagraph>
-        More details about course content and schedule for the Learner track can
-        be found below:
-      </BodyParagraph>
+      <Typography paragraph align="center" style={{maxWidth: "500px", margin: "20px auto"}}>
+        <Typography variant="h4">Learn</Typography>
+        <Typography style={{marginTop: "15px"}}>
+          The first 8 weeks will be focused on learning the basics of web development 
+          from course material that we will distribute weekly over Discord and video. 
+          Small projects will also be assigned to help you build your skills.
+        </Typography>
+      </Typography>
       <TimelineList />
+      <Typography paragraph align="center" style={{maxWidth: "500px", margin: "20px auto"}}>
+        <Typography variant="h4">Create</Typography>
+        <Typography style={{marginTop: "15px"}}>
+          The last 4 weeks will be focused on using what you’ve learned over the summer 
+          to create and showcase a final project in groups of 4-6 Learners, which can 
+          be put in your portfolio and resume.
+        </Typography>
+      </Typography>
       <BodyParagraph>
         <i>
           *Note: there may be a small cost for course materials for weeks 5-8
