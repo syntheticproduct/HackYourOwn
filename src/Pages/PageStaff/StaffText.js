@@ -15,12 +15,8 @@ export function StaffLeadershipTeam() {
 export function StaffLeadershipText() {
   return (
     <Body>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu sem
-      facilisis, auctor arcu nec, dictum dui. Etiam ultrices interdum accumsan.
-      Aenean eu ligula ex. In ac diam tristique, sagittis ipsum nec, aliquam
-      metus. Sed et rutrum ex, eget dictum odio. Vivamus pharetra justo urna, a
-      convallis magna accumsan ac. Nunc pharetra diam ac nibh sollicitudin, sit
-      amet bibendum augue iaculis.
+      Meet our leadership team! Our leadership team oversees the program's
+      efforts and affirms that the program is running smoothly.
     </Body>
   );
 }
