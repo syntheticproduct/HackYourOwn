@@ -1,6 +1,7 @@
 import Grid from "@material-ui/core/Grid";
 import { ResponsiveAvatarCards } from "components/Cards/AvatarCards.styled";
 
+// eslint-disable-next-line import/prefer-default-export
 export function MentorsCards() {
   return (
     <Grid container spacing={3}>
@@ -8,7 +9,7 @@ export function MentorsCards() {
       <Rykuno />
       <Lyndon />
     </Grid>
-  )
+  );
 }
 
 const Kevin = () => (

@@ -11,7 +11,7 @@
     "@material-ui/core": "^4.9.14",
     "clsx": "latest",
     "next": "latest",
-    "prop-types": "latest",
+    "prop-types": "^15.7.2",
     "react": "latest",
     "react-dom": "latest"
   },
@@ -24,5 +24,14 @@
   "main": "index.js",
   "license": "MIT",
   "description": "hyo website",
-  "author": "Hack-Your-Own"
+  "author": "Hack-Your-Own",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.1.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.4"
+  }
 }

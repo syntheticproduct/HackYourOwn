@@ -2,6 +2,7 @@ import React from "react";
 import { styled, withTheme } from "@material-ui/core/styles";
 import { Card, CardContent, CardActions, Typography } from "@material-ui/core";
 
+// eslint-disable-next-line import/prefer-default-export
 export const SectionCard = withTheme(
   styled(({ children, title, body, ...other }) => (
     <Card {...other}>
@@ -13,9 +14,7 @@ export const SectionCard = withTheme(
           {body}
         </Typography>
       </SectionCardContent>
-      {React.Children.map(children, (child) => {
-        return <CardActions>{child}</CardActions>;
-      })}
+      {React.Children.map(children, (child) => <CardActions>{child}</CardActions>)}
     </Card>
   ))({
     height: "100%",
@@ -25,12 +24,8 @@ export const SectionCard = withTheme(
     justifyContent: "center",
     alignItems: "center",
     transition: "0.3s",
-    "&:hover": {
-      boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)",
-    },
-  })
+    "&:hover": { boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)" },
+  }),
 );
 
-const SectionCardContent = styled(CardContent)({
-  flexGrow: 1,
-});
+const SectionCardContent = styled(CardContent)({ flexGrow: 1 });
