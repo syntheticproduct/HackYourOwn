@@ -2,6 +2,7 @@ import React from "react";
 import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import { useTheme } from "@material-ui/core/styles";
+import PropTypes from "prop-types";
 
 export const Heading = ({ text }) => (
   <>
@@ -12,6 +13,8 @@ export const Heading = ({ text }) => (
   </>
 );
 
+Heading.propTypes = { text: PropTypes.string.isRequired };
+
 export const SubHeading = ({ text }) => (
   <>
     <Typography style={{ margin: "30px 0" }} variant="h5" align="center">
@@ -20,6 +23,8 @@ export const SubHeading = ({ text }) => (
     <HeadDivider />
   </>
 );
+
+SubHeading.propTypes = { text: PropTypes.string.isRequired };
 
 const HeadDivider = () => <Divider style={{ margin: "30px 0" }} />;
 
@@ -38,6 +43,8 @@ export function Body({ children }) {
   );
 }
 
+Body.propTypes = { children: PropTypes.any.isRequired };
+
 export function BodyParagraph({ children }) {
   const theme = useTheme();
 
@@ -53,6 +60,8 @@ export function BodyParagraph({ children }) {
   );
 }
 
+BodyParagraph.propTypes = { children: PropTypes.any.isRequired };
+
 export function BodyEnd({ children }) {
   const theme = useTheme();
 
@@ -67,3 +76,5 @@ export function BodyEnd({ children }) {
     </Typography>
   );
 }
+
+BodyEnd.propTypes = { children: PropTypes.any.isRequired };

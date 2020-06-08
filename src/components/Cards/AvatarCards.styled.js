@@ -1,5 +1,6 @@
 import { Typography, Grid, Avatar, Paper } from "@material-ui/core";
 import { styled } from "@material-ui/core/styles";
+import PropTypes from "prop-types";
 
 export const AvatarCards = ({ src, name, children }) => (
   <Grid item xs={12}>
@@ -11,6 +12,12 @@ export const AvatarCards = ({ src, name, children }) => (
   </Grid>
 );
 
+AvatarCards.propTypes = {
+  src: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
+};
+
 export const ResponsiveAvatarCards = ({ src, name, children, lg }) => (
   <Grid item xs={12} sm={6} lg={lg || 3}>
     <StyledHeightPaper>
@@ -21,6 +28,15 @@ export const ResponsiveAvatarCards = ({ src, name, children, lg }) => (
   </Grid>
 );
 
+ResponsiveAvatarCards.propTypes = {
+  src: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
+  lg: PropTypes.number,
+};
+
+ResponsiveAvatarCards.defaultProps = { lg: 3 };
+
 export const NoPictureAvatarCards = ({ name, children }) => (
   <Grid item xs={12}>
     <StyledPaper>
@@ -30,6 +46,11 @@ export const NoPictureAvatarCards = ({ name, children }) => (
     </StyledPaper>
   </Grid>
 );
+
+NoPictureAvatarCards.propTypes = {
+  name: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
+};
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(2),

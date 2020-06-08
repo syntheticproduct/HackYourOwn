@@ -6,6 +6,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import PropTypes from "prop-types";
 
 export const StyledList = ({ text, icon }) => (
   <List style={{ paddingTop: 0, paddingBottom: 0 }}>
@@ -20,6 +21,11 @@ export const StyledList = ({ text, icon }) => (
     </ListItem>
   </List>
 );
+
+StyledList.propTypes = {
+  icon: PropTypes.any.isRequired,
+  text: PropTypes.string.isRequired,
+};
 
 export const TitleStyledList = ({ title, text }) => (
   <List style={{ paddingTop: 0, paddingBottom: 0 }}>
@@ -44,3 +50,9 @@ export const TitleStyledList = ({ title, text }) => (
     </ListItem>
   </List>
 );
+
+
+TitleStyledList.propTypes = {
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+};

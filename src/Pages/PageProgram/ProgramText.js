@@ -1,4 +1,4 @@
-import { ProgramList, TimelineList } from "components/List/ProgramList";
+import { ProgramList, TimelineList } from "Pages/PageProgram/ProgramList";
 import {
   Body,
   BodyEnd,
