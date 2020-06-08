@@ -21,7 +21,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Collapse from "@material-ui/core/Collapse";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import Link from "next/link"
+import Link from "next/link";
 
 const drawerWidth = 240;
 
@@ -40,9 +40,7 @@ const useStyles = makeStyles((theme) => ({
     }),
     marginRight: drawerWidth,
   },
-  hide: {
-    display: "none",
-  },
+  hide: { display: "none" },
   drawer: {
     position: "absolute",
     width: drawerWidth,
@@ -106,9 +104,7 @@ export default function MobileDrawer() {
         variant="persistent"
         anchor="right"
         open={open}
-        classes={{
-          paper: classes.drawerPaper,
-        }}
+        classes={{ paper: classes.drawerPaper }}
       >
         <div className={classes.drawerHeader}>
           <IconButton onClick={handleDrawerClose}>
@@ -126,7 +122,7 @@ export default function MobileDrawer() {
           </IconButton>
         </div>
         <Divider />
-        <Menu/>
+        <Menu />
       </Drawer>
     </>
   );
@@ -138,11 +134,7 @@ const useStyles2 = makeStyles((theme) => ({
   dropdown: {
     position: "relative",
     display: "inlineBlock",
-    "&:hover": {
-      "& a": {
-        display: "block",
-      },
-    },
+    "&:hover": { "& a": { display: "block" } },
   },
   dropdownContent: {
     position: "absolute",
@@ -156,23 +148,22 @@ const useStyles2 = makeStyles((theme) => ({
       padding: "12px 16px",
       textDecoration: "none",
       display: "none",
-      "&:hover": {
-        backgroundColor: "#ddd",
-      },
+      "&:hover": { backgroundColor: "#ddd" },
     },
   },
 }));
 
-export function Menu({match}) {
+export function Menu({ match }) {
   const classes = useStyles2();
 
-  const menu1 = {
-    menu: "OUR STORIES",
-    topic1: { desc: "Our Program", href: "/program" },
-    topic2: { desc: "Get Involved", href: "/get-involved" },
-    topic3: { desc: "Meet our Staff", href: "/staff" },
-    topic4: { desc: "Meet our Students", href: "/students" },
-  };
+  const menu1 = [
+    // menu: 'OUR STORIES',
+    { desc: "Our Program", href: "/program" },
+    { desc: "Get Involved", href: "/get-involved" },
+    { desc: "Meet our Staff", href: "/staff" },
+    { desc: "Meet our Students", href: "/students" },
+    { desc: "Meet our Mentors", href: "/mentors" },
+  ];
 
   const [open, setOpen] = React.useState(false);
 
@@ -180,163 +171,40 @@ export function Menu({match}) {
     setOpen(!open);
   };
 
+  const getLinks = (match) => {
+    const links = [];
+    if (match) {
+      menu1.forEach((topic, i) => links.push(
+        <Link key={i} href={topic.href}>
+          <Button>{topic.desc}</Button>
+        </Link>,
+      ));
+      return links;
+    }
+    menu1.forEach((topic, i) => links.push(
+      <List key={i} component="div" disablePadding>
+        <Link href={topic.href}>
+          <ListItem button className={classes.nested} component="a">
+            <ListItemText
+              disableTypography
+              primary={(
+                <Typography component="div">
+                  <Box fontWeight="fontWeightBold" m={1}>
+                    {topic.desc}
+                  </Box>
+                </Typography>
+       )}
+            />
+          </ListItem>
+        </Link>
+      </List>,
+    ));
+    return <List>{links}</List>;
+  };
+
   return (
     <div>
-      {(() => {
-        if (match) {
-          return (
-            <div>
-              {/*
-              <Button>{menu1["menu"]}</Button>
-              <div className={classes.dropdownContent}>
-               */}
-              <Link href={menu1["topic1"]["href"]}>
-                <Button>{menu1["topic1"]["desc"]}</Button>
-              </Link>
-              <Link href={menu1["topic2"]["href"]}>
-                <Button>{menu1["topic2"]["desc"]}</Button>
-              </Link>
-              <Link href={menu1["topic3"]["href"]}>
-                <Button>{menu1["topic3"]["desc"]}</Button>
-              </Link>
-              <Link href={menu1["topic4"]["href"]}>
-                <Button>{menu1["topic4"]["desc"]}</Button>
-              </Link>
-              {/*
-              </div>  */}
-            </div>
-          );
-        } else {
-          return (
-            <List>
-              <List component="div" disablePadding>
-                <Link href={menu1["topic1"]["href"]}>
-                  <ListItem button className={classes.nested} component="a">
-                    <ListItemText
-                      disableTypography
-                      primary={
-                        <Typography component="div">
-                          <Box fontWeight="fontWeightBold" m={1}>
-                            {menu1["topic1"]["desc"]}
-                          </Box>
-                        </Typography>
-                      }
-                    />
-                  </ListItem>
-                </Link>
-              </List>
-              <List component="div" disablePadding>
-                <Link href={menu1["topic2"]["href"]}>
-                  <ListItem button className={classes.nested} component="a">
-                    <ListItemText
-                      disableTypography
-                      primary={
-                        <Typography component="div">
-                          <Box fontWeight="fontWeightBold" m={1}>
-                            {menu1["topic2"]["desc"]}
-                          </Box>
-                        </Typography>
-                      }
-                    />
-                  </ListItem>
-                </Link>
-              </List>
-              <List component="div" disablePadding>
-                <Link href={menu1["topic3"]["href"]}>
-                  <ListItem button className={classes.nested} component="a">
-                    <ListItemText
-                      disableTypography
-                      primary={
-                        <Typography component="div">
-                          <Box fontWeight="fontWeightBold" m={1}>
-                            {menu1["topic3"]["desc"]}
-                          </Box>
-                        </Typography>
-                      }
-                    />
-                  </ListItem>
-                </Link>
-              </List>
-              <List component="div" disablePadding>
-                <Link href={menu1["topic4"]["href"]}>
-                  <ListItem button className={classes.nested} component="a">
-                    <ListItemText
-                      disableTypography
-                      primary={
-                        <Typography component="div">
-                          <Box fontWeight="fontWeightBold" m={1}>
-                            {menu1["topic4"]["desc"]}
-                          </Box>
-                        </Typography>
-                      }
-                    />
-                  </ListItem>
-                </Link>
-              </List>
-              {/*
-                {open ? (
-                  <FontAwesomeIcon
-                    icon={faChevronUp}
-                    style={{ fontSize: "1.125rem" }}
-                  />
-                ) : (
-                  <FontAwesomeIcon
-                    icon={faChevronDown}
-                    style={{ fontSize: "1.125rem" }}
-                  />
-                )}
-                */}
-              {/*
-              <Collapse
-                in={open}
-                timeout="auto"
-                unmountOnExit
-                style={{ backgroundColor: "#f8f8f6" }}
-              >
-                <List component="div" disablePadding>
-                  <ListItem
-                    button
-                    className={classes.nested}
-                    component="a"
-                    href={menu1["topic1"]["href"]}
-                  >
-                    <ListItemText
-                      disableTypography
-                      primary={
-                        <Typography component="div">
-                          <Box fontWeight="fontWeightLight" m={1}>
-                            {menu1["topic1"]["desc"]}
-                          </Box>
-                        </Typography>
-                      }
-                    />
-                  </ListItem>
-                </List>
-                <List component="div" disablePadding>
-                  <ListItem
-                    button
-                    className={classes.nested}
-                    component="a"
-                    href={menu1["topic2"]["href"]}
-                  >
-                    <ListItemText
-                      disableTypography
-                      primary={
-                        <Typography component="div">
-                          <Box fontWeight="fontWeightLight" m={1}>
-                            {menu1["topic2"]["desc"]}
-                          </Box>
-                        </Typography>
-                      }
-                    />
-                  </ListItem>
-                </List>
-              </Collapse>
-               */}
-            </List>
-          );
-        }
-      })()}
+      {getLinks(match)}
     </div>
   );
 }
