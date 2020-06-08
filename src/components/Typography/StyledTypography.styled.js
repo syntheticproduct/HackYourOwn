@@ -3,23 +3,31 @@ import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
 import { useTheme } from "@material-ui/core/styles";
 
-export const Heading = ({ text }) => (
-  <>
-    <Typography style={{ margin: "30px 0" }} variant="h4" align="center">
-      {text}
-    </Typography>
-    <HeadDivider />
-  </>
-);
+export const Heading = ({ text, variant, fontWeight }) => {
+  const theme = useTheme();
 
-export const SubHeading = ({ text }) => (
-  <>
-    <Typography style={{ margin: "30px 0" }} variant="h5" align="center">
-      {text}
-    </Typography>
-    <HeadDivider />
-  </>
-);
+  return (
+    <>
+      <Typography style={{ margin: theme.spacing(4, 0), fontWeight: fontWeight || 400 }} variant={variant || "h4"} align="center">
+        {text}
+      </Typography>
+      <HeadDivider />
+    </>
+  );
+}
+
+export const SubHeading = ({ text }) => {
+  const theme = useTheme();
+
+  return (
+    <>
+      <Typography style={{ margin: theme.spacing(4, 0) }} variant="h5" align="center">
+        {text}
+      </Typography>
+      <HeadDivider />
+    </>
+  );
+}
 
 const HeadDivider = () => <Divider style={{ margin: "30px 0" }} />;
 

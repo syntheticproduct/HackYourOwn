@@ -28,6 +28,9 @@ const useStyles = makeStyles({
   },
   left: {
     textAlign: "right"
+  },
+  header: {
+    fontWeight: "lighter"
   }
 });
 
@@ -41,6 +44,7 @@ export const TitleStyledList = ({ title, text, icon, left }) => {
           primary={
             <>
               <Typography
+                className={classes.header}
                 variant="h6"
               >
                 {title}

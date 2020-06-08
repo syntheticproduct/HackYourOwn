@@ -3,10 +3,30 @@ import { List } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
+const useTimelineCircleStyles = makeStyles({
+  root: {
+    width: "20px",
+    height: "20px",
+    borderRadius: "50%",
+    background: "white",
+    border: "3px solid orange"
+  }
+});
+
+const TimelineCircle = () => {
+  const classes = useTimelineCircleStyles();
+
+  return <div className={classes.root} />
+};
+
 const useTimelineStyles = makeStyles({
   root: {
-    maxWidth: "70%",
-    margin: "30px auto"
+    width: "75%",
+    margin: "30px auto",
+    "@media (max-width: 600px)": {
+      width: "100%",
+      margin: 0,
+    }
   },
   dFlex: {
     display: "flex"
@@ -33,16 +53,7 @@ const useTimelineStyles = makeStyles({
     height: "100%",
     margin: "0 auto",
   }
-})
-
-const TimelineCircle = () => (
-  <div 
-    style={{ 
-      width: "30px", height: "30px", borderRadius: "50%", 
-      background: "white", border: "3px solid orange"
-    }} 
-  />
-);
+});
 
 export const TimelineList = () => {
   const classes = useTimelineStyles();
@@ -126,7 +137,7 @@ export const TimelineList = () => {
         <div className={classes.left}>
           <TitleStyledList
             left
-            title="Week 5-8"
+            title="Week 5–8"
             text="React, Node.js, Express.js, MongoDB, REST APIs*"
           />
         </div>
