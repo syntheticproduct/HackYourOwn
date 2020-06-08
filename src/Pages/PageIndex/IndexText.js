@@ -1,5 +1,5 @@
 import { Heading, Body } from "components/Typography/StyledTypography.styled";
-import { Link } from "@material-ui/core"
+import { Link } from "@material-ui/core";
 
 export function AboutSection() {
   return (
@@ -11,10 +11,10 @@ export function AboutSection() {
         developing their own projects to fill the void, self-study lacks a few
         crucial components of the internship experience - mentoring and feedback
         from professionals. Hack Your Own aims to add this extra dimension. By
-        participating, you'll join a community of like-minded peers to design
-        and build high-impact open source projects while receiving mentorship
-        and guidance from experienced developers. Think of it as an intensive
-        summer senior design course supported by industry advisors.
+        participating, you&apos;ll join a community of like-minded peers to
+        design and build high-impact open source projects while receiving
+        mentorship and guidance from experienced developers. Think of it as an
+        intensive summer senior design course supported by industry advisors.
       </Body>
     </>
   );
@@ -43,8 +43,10 @@ export function WhoWeAreSection() {
       <Heading text="Who we are" />
       <Body>
         We are senior developers and tech leads from major US companies. Bios
-        will be added to this site soon. For now, view our staff page{" "}
-        <Link href="/staff">here</Link>.
+        will be added to this site soon. For now, view our staff page
+        {" "}
+        <Link href="/staff">here</Link>
+        .
       </Body>
     </>
   );

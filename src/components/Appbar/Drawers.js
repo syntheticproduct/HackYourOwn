@@ -21,7 +21,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Collapse from "@material-ui/core/Collapse";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import Link from "next/link"
+import Link from "next/link";
 
 const drawerWidth = 240;
 
@@ -40,9 +40,7 @@ const useStyles = makeStyles((theme) => ({
     }),
     marginRight: drawerWidth,
   },
-  hide: {
-    display: "none",
-  },
+  hide: { display: "none" },
   drawer: {
     position: "absolute",
     width: drawerWidth,
@@ -106,9 +104,7 @@ export default function MobileDrawer() {
         variant="persistent"
         anchor="right"
         open={open}
-        classes={{
-          paper: classes.drawerPaper,
-        }}
+        classes={{ paper: classes.drawerPaper }}
       >
         <div className={classes.drawerHeader}>
           <IconButton onClick={handleDrawerClose}>
@@ -126,7 +122,7 @@ export default function MobileDrawer() {
           </IconButton>
         </div>
         <Divider />
-        <Menu/>
+        <Menu />
       </Drawer>
     </>
   );
@@ -138,11 +134,7 @@ const useStyles2 = makeStyles((theme) => ({
   dropdown: {
     position: "relative",
     display: "inlineBlock",
-    "&:hover": {
-      "& a": {
-        display: "block",
-      },
-    },
+    "&:hover": { "& a": { display: "block" } },
   },
   dropdownContent: {
     position: "absolute",
@@ -156,66 +148,63 @@ const useStyles2 = makeStyles((theme) => ({
       padding: "12px 16px",
       textDecoration: "none",
       display: "none",
-      "&:hover": {
-        backgroundColor: "#ddd",
-      },
+      "&:hover": { backgroundColor: "#ddd" },
     },
   },
 }));
 
-export function Menu({match}) {
+export function Menu({ match }) {
   const classes = useStyles2();
 
   const menu1 = [
-		// menu: 'OUR STORIES',
-		{ desc: "Our Program", href: "/program" },
-		{ desc: "Get Involved", href: "/get-involved" },
-		{ desc: "Meet our Staff", href: "/staff" },
-		{ desc: "Meet our Students", href: "/students" },
-		{ desc: "Meet our Mentors", href: "/mentors" },
+    // menu: 'OUR STORIES',
+    { desc: "Our Program", href: "/program" },
+    { desc: "Get Involved", href: "/get-involved" },
+    { desc: "Meet our Staff", href: "/staff" },
+    { desc: "Meet our Students", href: "/students" },
+    { desc: "Meet our Mentors", href: "/mentors" },
   ];
 
-	const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(false);
 
-	const handleClick = () => {
-		setOpen(!open);
+  const handleClick = () => {
+    setOpen(!open);
   };
-  
+
   const getLinks = (match) => {
-    let links = [];
+    const links = [];
     if (match) {
       menu1.forEach((topic, i) => links.push(
-        <Link key={i} href={topic["href"]}>
-          <Button>{topic["desc"]}</Button>
-        </Link>)
-        );
-        return links;
-    } else {
-      menu1.forEach((topic, i) => links.push(
-        <List key={i} component="div" disablePadding>
-					<Link href={topic["href"]}>
-						<ListItem button className={classes.nested} component="a">
-							<ListItemText
-								disableTypography
-								primary={
-									<Typography component="div">
-										<Box fontWeight="fontWeightBold" m={1}>
-											{topic["desc"]}
-										</Box>
-									</Typography>
-								}
-							/>
-						</ListItem>
-					</Link>
-				</List>
+        <Link key={i} href={topic.href}>
+          <Button>{topic.desc}</Button>
+        </Link>,
       ));
-      return <List>{links}</List>
+      return links;
     }
-  }
+    menu1.forEach((topic, i) => links.push(
+      <List key={i} component="div" disablePadding>
+        <Link href={topic.href}>
+          <ListItem button className={classes.nested} component="a">
+            <ListItemText
+              disableTypography
+              primary={(
+                <Typography component="div">
+                  <Box fontWeight="fontWeightBold" m={1}>
+                    {topic.desc}
+                  </Box>
+                </Typography>
+       )}
+            />
+          </ListItem>
+        </Link>
+      </List>,
+    ));
+    return <List>{links}</List>;
+  };
 
-	return (
-		<div>
-			{getLinks(match)}
-		</div>
-	);
+  return (
+    <div>
+      {getLinks(match)}
+    </div>
+  );
 }

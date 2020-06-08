@@ -1,5 +1,6 @@
 import { SubHeading } from "components/Typography/StyledTypography.styled";
 
+// eslint-disable-next-line import/prefer-default-export
 export function StudentGrabber() {
   return (
     <>

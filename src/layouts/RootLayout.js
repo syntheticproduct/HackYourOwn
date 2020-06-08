@@ -7,6 +7,7 @@ import Copyright from "components/Copyright/Copyright";
 import Hero from "components/Hero/Hero";
 import Head from "next/head";
 import React from "react";
+import PropTypes from "prop-types";
 
 const useStyles = makeStyles((theme) => ({
   background: {
@@ -17,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function RootLayout({ children, title = "Home | HYO" }) {
+export default function RootLayout({ children, title }) {
   const classes = useStyles();
   return (
     <>
@@ -39,3 +40,10 @@ export default function RootLayout({ children, title = "Home | HYO" }) {
     </>
   );
 }
+
+RootLayout.propTypes = {
+  children: PropTypes.any.isRequired,
+  title: PropTypes.string,
+};
+
+RootLayout.defaultProps = { title: "Home | HYO" };

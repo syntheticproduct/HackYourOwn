@@ -1,5 +1,5 @@
-import { StyledButton } from "./StyledButton.styled";
 import { faDiscord, faPaypal } from "@fortawesome/free-brands-svg-icons";
+import { StyledButton } from "./StyledButton.styled";
 
 export function DiscordButton() {
   return (
