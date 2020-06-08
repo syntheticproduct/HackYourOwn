@@ -44,6 +44,8 @@ export const TitleStyledList = ({ title, text, left }) => {
   return (
     <ListItem className={classes.root}>
       <ListItemText
+        // Refactor this in the future :)
+        // eslint-disable-next-line no-nested-ternary
         className={useMediaQuery((theme) => theme.breakpoints.down("sm")) ? "" : (left ? classes.left : "")}
         disableTypography
         primary={(
@@ -67,4 +69,7 @@ export const TitleStyledList = ({ title, text, left }) => {
 TitleStyledList.propTypes = {
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
+  left: PropTypes.bool,
 };
+
+TitleStyledList.defaultProps = { left: false };
