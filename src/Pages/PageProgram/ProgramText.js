@@ -11,7 +11,7 @@ import { Typography } from "@material-ui/core";
 export function ProjectSection() {
   return (
     <>
-      <Heading text="Project Track" />
+      <Heading fontWeight={700} variant="h3" text="Project Track" />
       <Body>
         This track is meant for <b>intermediate developers</b> or above. Based
         on your answers to our questionnaire, we match you up in groups of
@@ -33,7 +33,7 @@ export function ProjectSection() {
 export function LearnerSection() {
   return (
     <>
-      <Heading text="Learner Track" />
+      <Heading fontWeight={700} variant="h3" text="Learner Track" />
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
           <Body>
@@ -83,7 +83,7 @@ export function LearnerBody() {
     <>
       <BodyParagraph>
         <i>
-          *Note: there may be a small cost for course materials for weeks 5-8
+          *Note: there may be a small cost for course materials for weeks 5–8
           (maximum of $20) due to the use of outside materials for our
           curriculum.
         </i>
