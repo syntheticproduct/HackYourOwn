@@ -10,7 +10,7 @@ export const Heading = ({ text }) => {
   return (
     <>
       <Typography
-        style={{ margin: theme.spacing(4, 0), fontWeight: 700 }}
+        style={{ margin: theme.spacing(5, 0, 2, 0), fontWeight: 700 }}
         variant="h4"
         align="center"
       >
@@ -35,7 +35,7 @@ export const SubHeading = ({ text }) => {
   const theme = useTheme();
   return (
     <>
-      <Typography style={{ margin: theme.spacing(3, 0), fontWeight: 700 }} variant="h4" align="center">
+      <Typography style={{ margin: theme.spacing(5, 0, 2, 0), fontWeight: 700 }} variant="h5" align="center">
         {text}
       </Typography>
     </>
