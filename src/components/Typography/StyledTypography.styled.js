@@ -4,19 +4,18 @@ import Divider from "@material-ui/core/Divider";
 import { useTheme } from "@material-ui/core/styles";
 import PropTypes from "prop-types";
 
-export const Heading = ({ text, variant, fontWeight }) => {
+export const Heading = ({ text }) => {
   const theme = useTheme();
 
   return (
     <>
       <Typography
-        style={{ margin: theme.spacing(4, 0), fontWeight: fontWeight || 400 }}
-        variant={variant || "h4"}
+        style={{ margin: theme.spacing(4, 0), fontWeight: 700 }}
+        variant="h4"
         align="center"
       >
         {text}
       </Typography>
-      <HeadDivider />
     </>
   );
 };
@@ -32,14 +31,16 @@ Heading.defaultProps = {
   fontWeight: 400,
 };
 
-export const SubHeading = ({ text }) => (
-  <>
-    <Typography style={{ margin: "30px 0" }} variant="h5" align="center">
-      {text}
-    </Typography>
-    <HeadDivider />
-  </>
-);
+export const SubHeading = ({ text }) => {
+  const theme = useTheme();
+  return (
+    <>
+      <Typography style={{ margin: theme.spacing(3, 0), fontWeight: 700 }} variant="h4" align="center">
+        {text}
+      </Typography>
+    </>
+  )
+};
 
 SubHeading.propTypes = { text: PropTypes.string.isRequired };
 
@@ -54,6 +55,7 @@ export function Body({ children }) {
       color="textSecondary"
       style={{ padding: theme.spacing(1, 0, 0) }}
       align="center"
+      paragraph
     >
       {children}
     </Typography>
@@ -71,6 +73,7 @@ export function BodyParagraph({ children }) {
       color="textSecondary"
       style={{ padding: theme.spacing(0, 0, 0) }}
       align="center"
+      paragraph
     >
       {children}
     </Typography>
@@ -88,6 +91,7 @@ export function BodyEnd({ children }) {
       color="textSecondary"
       style={{ padding: theme.spacing(0, 0, 1) }}
       align="center"
+      paragraph
     >
       {children}
     </Typography>
