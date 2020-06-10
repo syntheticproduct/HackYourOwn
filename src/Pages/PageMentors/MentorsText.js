@@ -1,4 +1,5 @@
 import {
+  Heading,
   SubHeading,
   Body,
 } from "components/Typography/StyledTypography.styled";
@@ -8,7 +9,7 @@ export function MentorsGrabber() {
 }
 
 export function MentorsPurpose() {
-  return <SubHeading text="Why mentors?" />;
+  return <Heading text="Why mentors?" />;
 }
 
 export function MentorsText() {

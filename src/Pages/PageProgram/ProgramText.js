@@ -4,6 +4,7 @@ import {
   BodyEnd,
   BodyParagraph,
   Heading,
+  SubHeading
 } from "components/Typography/StyledTypography.styled";
 import Grid from "@material-ui/core/Grid";
 import { Typography } from "@material-ui/core";
@@ -11,7 +12,7 @@ import { Typography } from "@material-ui/core";
 export function ProjectSection() {
   return (
     <>
-      <Heading fontWeight={700} variant="h3" text="Project Track" />
+      <Heading text="Project Track" />
       <Body>
         This track is meant for
         {" "}
@@ -43,7 +44,7 @@ export function ProjectSection() {
 export function LearnerSection() {
   return (
     <>
-      <Heading fontWeight={700} variant="h3" text="Learner Track" />
+      <Heading text="Learner Track" />
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
           <Body>
@@ -77,18 +78,14 @@ export function LearnerSection() {
           </BodyParagraph>
         </Grid>
       </Grid>
-      <div
-        style={{ maxWidth: "500px", margin: "20px auto", textAlign: "center" }}
-      >
-        <Typography variant="h4" component="h4">
-          Learn
-        </Typography>
-        <Typography style={{ marginTop: "15px" }}>
+      <div style={{ maxWidth: "500px", margin: "0 auto" }} >
+        <SubHeading text="Learn" />
+        <Body>
           The first 8 weeks will be focused on learning the basics of web
           development from course material that we will distribute weekly over
           Discord and video. Small projects will also be assigned to help you
           build your skills.
-        </Typography>
+        </Body>
       </div>
       <TimelineList />
     </>
@@ -105,17 +102,13 @@ export function LearnerBody() {
           curriculum.
         </i>
       </BodyParagraph>
-      <div
-        style={{ maxWidth: "500px", margin: "20px auto", textAlign: "center" }}
-      >
-        <Typography variant="h4" component="h4">
-          Create
-        </Typography>
-        <Typography style={{ marginTop: "15px" }}>
+      <div style={{ maxWidth: "500px", margin: "0 auto" }}>
+        <SubHeading text="Create" />
+        <Body>
           The last 4 weeks will be focused on using what you’ve learned over the
           summer to create and showcase a final project in groups of 4-6
           Learners, which can be put in your portfolio and resume.
-        </Typography>
+        </Body>
       </div>
     </>
   );
