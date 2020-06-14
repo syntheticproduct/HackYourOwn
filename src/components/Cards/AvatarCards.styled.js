@@ -86,7 +86,7 @@ const StyledHeightPaper = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(6),
   textAlign: "center",
   color: theme.palette.text.secondary,
-  height: "230px",
+  minHeight: "230px",
   "&:hover": { boxShadow: "0 8px 16px 0 rgba(0,0,0,0.2)" },
 }));
 
