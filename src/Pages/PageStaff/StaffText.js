@@ -1,7 +1,7 @@
-import { SubHeading, Body } from "components/Typography/StyledTypography.styled";
+import { Heading, SubHeading, Body } from "components/Typography/StyledTypography.styled";
 
 export function StaffGrabber() {
-  return <SubHeading text="Meet The Team" />;
+  return <Heading text="Meet The Team" />;
 }
 
 export function StaffLeadershipPurpose() {
