@@ -40,9 +40,9 @@ export const ResponsiveAvatarCards = ({ src, name, children, lg, extraInfo }) =>
           <Typography varaint="subtitle1">{children}</Typography>
         </StyledHeightPaper>
       </Grid>
-      <CardDialog open={open} handleClose={handleClose} title={name}>
-        { extraInfo || "Insert additional info here"}
-      </CardDialog>
+      {/* <CardDialog open={open} handleClose={handleClose} title={name}>
+        { extraInfo }
+      </CardDialog> */}
     </>
   );
 };
