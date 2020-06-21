@@ -6,6 +6,8 @@ import {
   Typography,
 } from "@material-ui/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { makeStyles } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 import PropTypes from "prop-types";
 
 export const StyledList = ({ text, icon }) => (
@@ -27,32 +29,47 @@ StyledList.propTypes = {
   text: PropTypes.string.isRequired,
 };
 
-export const TitleStyledList = ({ title, text }) => (
-  <List style={{ paddingTop: 0, paddingBottom: 0 }}>
-    <ListItem style={{ paddingTop: 0, paddingBottom: 0 }}>
+const useStyles = makeStyles({
+  root: {
+    paddingTop: 0,
+    paddingBottom: 0,
+    margin: 0,
+  },
+  left: { textAlign: "right" },
+  header: { fontWeight: "lighter" },
+});
+
+export const TitleStyledList = ({ title, text, left }) => {
+  const classes = useStyles();
+  return (
+    <ListItem className={classes.root}>
       <ListItemText
+        // Refactor this in the future :)
+        // eslint-disable-next-line no-nested-ternary
+        className={useMediaQuery((theme) => theme.breakpoints.down("sm")) ? "" : (left ? classes.left : "")}
         disableTypography
         primary={(
           <>
             <Typography
+              className={classes.header}
               variant="h6"
-              align="center"
-              style={{ textDecoration: "underline" }}
             >
               {title}
             </Typography>
-            <Typography variant="body1" align="center" color="textSecondary">
+            <Typography variant="body1" color="textSecondary">
               {text}
             </Typography>
           </>
           )}
       />
     </ListItem>
-  </List>
-);
-
+  );
+};
 
 TitleStyledList.propTypes = {
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
+  left: PropTypes.bool,
 };
+
+TitleStyledList.defaultProps = { left: false };

@@ -1,5 +1,5 @@
 import Grid from "@material-ui/core/Grid";
-import { ResponsiveAvatarCards } from "components/Cards/AvatarCards.styled";
+import { ResponsiveAvatarCards, AvatarCards } from "components/Cards/AvatarCards.styled";
 
 export function StaffCards() {
   return (
@@ -21,28 +21,28 @@ export function LeadershipStaffCards() {
   return (
     <Grid container spacing={3}>
       <Camille />
+      <Sabrina />
       <Aryan />
+      <Leo />
       <Isabella />
       <Paul />
       <Binvant />
       <Josh />
       <Coleman />
-      <Leo />
       <Jenn />
-      <Sabrina />
     </Grid>
   );
 }
 
 const Camille = () => (
-  <ResponsiveAvatarCards src="/images/staff/camille.png" name="Camille">
+  <AvatarCards src="/images/staff/camille.png" name="Camille">
     Founder, Director
-  </ResponsiveAvatarCards>
+  </AvatarCards>
 );
 
 const Aryan = () => (
   <ResponsiveAvatarCards src="/images/staff/aryan.png" name="Aryan">
-    Community Lead (USA)
+    Cohort Manager
   </ResponsiveAvatarCards>
 );
 
@@ -90,7 +90,7 @@ const Coleman = () => (
 
 const Leo = () => (
   <ResponsiveAvatarCards src="/images/staff/leo.jpg" name="Leo">
-    Project Lead (Website)
+    Website Lead
   </ResponsiveAvatarCards>
 );
 
@@ -102,7 +102,7 @@ const Jenn = () => (
 
 const David = () => (
   <ResponsiveAvatarCards src="/images/staff/david.jpg" name="David">
-    Cohort Associate, Mentor
+    Cohort Associate
   </ResponsiveAvatarCards>
 );
 
@@ -144,6 +144,6 @@ const Johnathan = () => (
 
 const Sabrina = () => (
   <ResponsiveAvatarCards src="/images/staff/sabrina.png" name="Sabrina">
-    Project Lead (Cohort)
+    Learner Track Lead
   </ResponsiveAvatarCards>
 );

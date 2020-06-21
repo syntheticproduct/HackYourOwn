@@ -4,25 +4,43 @@ import Divider from "@material-ui/core/Divider";
 import { useTheme } from "@material-ui/core/styles";
 import PropTypes from "prop-types";
 
-export const Heading = ({ text }) => (
-  <>
-    <Typography style={{ margin: "30px 0" }} variant="h4" align="center">
-      {text}
-    </Typography>
-    <HeadDivider />
-  </>
-);
+export const Heading = ({ text }) => {
+  const theme = useTheme();
 
-Heading.propTypes = { text: PropTypes.string.isRequired };
+  return (
+    <>
+      <Typography
+        style={{ margin: theme.spacing(5, 0, 2, 0), fontWeight: 700 }}
+        variant="h4"
+        align="center"
+      >
+        {text}
+      </Typography>
+    </>
+  );
+};
 
-export const SubHeading = ({ text }) => (
-  <>
-    <Typography style={{ margin: "30px 0" }} variant="h5" align="center">
-      {text}
-    </Typography>
-    <HeadDivider />
-  </>
-);
+Heading.propTypes = {
+  text: PropTypes.string.isRequired,
+  variant: PropTypes.string,
+  fontWeight: PropTypes.number,
+};
+
+Heading.defaultProps = {
+  variant: "h4",
+  fontWeight: 400,
+};
+
+export const SubHeading = ({ text }) => {
+  const theme = useTheme();
+  return (
+    <>
+      <Typography style={{ margin: theme.spacing(5, 0, 2, 0), fontWeight: 700 }} variant="h5" align="center">
+        {text}
+      </Typography>
+    </>
+  )
+};
 
 SubHeading.propTypes = { text: PropTypes.string.isRequired };
 
@@ -37,6 +55,7 @@ export function Body({ children }) {
       color="textSecondary"
       style={{ padding: theme.spacing(1, 0, 0) }}
       align="center"
+      paragraph
     >
       {children}
     </Typography>
@@ -54,6 +73,7 @@ export function BodyParagraph({ children }) {
       color="textSecondary"
       style={{ padding: theme.spacing(0, 0, 0) }}
       align="center"
+      paragraph
     >
       {children}
     </Typography>
@@ -71,6 +91,7 @@ export function BodyEnd({ children }) {
       color="textSecondary"
       style={{ padding: theme.spacing(0, 0, 1) }}
       align="center"
+      paragraph
     >
       {children}
     </Typography>

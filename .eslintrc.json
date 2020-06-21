@@ -53,7 +53,8 @@
       }
     ],
     "react/no-array-index-key": "off",
-    "linebreak-style": "off"
+    "linebreak-style": "off",
+    "no-sequences": "off"
   },
   "plugins": []
 }

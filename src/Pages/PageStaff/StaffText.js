@@ -1,7 +1,7 @@
-import { SubHeading, Body } from "components/Typography/StyledTypography.styled";
+import { Heading, SubHeading, Body } from "components/Typography/StyledTypography.styled";
 
 export function StaffGrabber() {
-  return <SubHeading text="Meet The Team" />;
+  return <Heading text="Meet The Team" />;
 }
 
 export function StaffLeadershipPurpose() {
@@ -15,8 +15,12 @@ export function StaffLeadershipTeam() {
 export function StaffLeadershipText() {
   return (
     <Body>
-      Meet our leadership team! Our leadership team oversees the program's
+      Meet our leadership team! Our leadership team oversees the program&apos;s
       efforts and affirms that the program is running smoothly.
     </Body>
   );
+}
+
+export function VolunteerTeam() {
+  return <SubHeading text="Our Volunteers" />;
 }

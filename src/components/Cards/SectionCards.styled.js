@@ -4,10 +4,10 @@ import { Card, CardContent, CardActions, Typography } from "@material-ui/core";
 
 // eslint-disable-next-line import/prefer-default-export
 export const SectionCard = withTheme(
-  styled(({ children, title, body, ...other }) => (
+  styled(({ children, title, body, theme, ...other }) => (
     <Card {...other}>
       <SectionCardContent>
-        <Typography gutterBottom variant="h5" component="h2" align="center">
+        <Typography style={{ fontWeight: 700, margin: theme.spacing(0, 0, 3, 0) }} gutterBottom variant="h5" component="h2" align="center">
           {title}
         </Typography>
         <Typography align="center" color="textSecondary" paragraph>

@@ -5,6 +5,7 @@ import {
   StaffLeadershipPurpose,
   StaffLeadershipTeam,
   StaffLeadershipText,
+  VolunteerTeam,
 } from "Pages/PageStaff/StaffText";
 import React from "react";
 
@@ -12,11 +13,12 @@ export default function Staff() {
   return (
     <RootLayout title="Staff | HYO">
       <StaffGrabber />
-      <StaffCards />
       <StaffLeadershipPurpose />
       <StaffLeadershipText />
       <StaffLeadershipTeam />
       <LeadershipStaffCards />
+      <VolunteerTeam />
+      <StaffCards />
     </RootLayout>
   );
 }
