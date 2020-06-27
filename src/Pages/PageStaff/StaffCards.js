@@ -13,6 +13,7 @@ export function StaffCards() {
       <David />
       <Fabian />
       <Jae />
+      <Catie />
     </Grid>
   );
 }
@@ -35,9 +36,9 @@ export function LeadershipStaffCards() {
 }
 
 const Camille = () => (
-  <AvatarCards src="/images/staff/camille.png" name="Camille">
+  <ResponsiveAvatarCards src="/images/staff/camille.png" name="Camille">
     Founder, Director
-  </AvatarCards>
+  </ResponsiveAvatarCards>
 );
 
 const Aryan = () => (
@@ -145,5 +146,11 @@ const Johnathan = () => (
 const Sabrina = () => (
   <ResponsiveAvatarCards src="/images/staff/sabrina.png" name="Sabrina">
     Learner Track Lead
+  </ResponsiveAvatarCards>
+);
+
+const Catie = () => (
+  <ResponsiveAvatarCards src="/images/staff/catie.jpg" name="Catie">
+    Social Media
   </ResponsiveAvatarCards>
 );
