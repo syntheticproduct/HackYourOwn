@@ -8,7 +8,6 @@ export function StaffCards() {
       <Kenny />
       <Mahad />
       <Tye />
-      <Johnathan />
       <Hendrix />
       <David />
       <Fabian />
@@ -25,6 +24,7 @@ export function LeadershipStaffCards() {
       <Sabrina />
       <Aryan />
       <Leo />
+      <Johnathan />
       <Isabella />
       <Paul />
       <Binvant />
@@ -139,7 +139,7 @@ const Tye = () => (
 
 const Johnathan = () => (
   <ResponsiveAvatarCards src="/images/staff/johnathan.png" name="Johnathan">
-    Volunteer, Engineer
+    Global Community Lead
   </ResponsiveAvatarCards>
 );
 
